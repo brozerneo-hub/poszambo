@@ -1,0 +1,10 @@
+{
+  "name": "pos-system-root",
+  "version": "1.0.0",
+  "scripts": {
+    "emulate": "cross-env PATH=\"C:\\Program Files\\Java\\jdk-21\\bin;%PATH%\" firebase emulators:start --only functions,firestore,auth,ui"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}
