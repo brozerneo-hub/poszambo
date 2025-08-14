@@ -4,8 +4,6 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-console.log('index.tsx is executing!'); // Added for debugging
-
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
