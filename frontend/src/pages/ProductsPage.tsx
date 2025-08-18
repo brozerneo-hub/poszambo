@@ -1,4 +1,5 @@
 import React, { useState, useMemo, useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useProducts } from '../hooks/useProducts';
 import { Product, Category } from '../types/types';
 import { ProductCard } from '../components/ProductCard';
@@ -6,8 +7,10 @@ import { ProductForm } from '../components/ProductForm';
 import { ConfirmationDialog } from '../components/ConfirmationDialog';
 import { useDebounce } from '../hooks/useDebounce';
 import CatalogTile from '../components/CatalogTile';
+import { StockView } from '../components/StockView';
 
 export const ProductsPage: React.FC = () => {
+  const navigate = useNavigate();
   const { products, categories, loading, error, addProduct, updateProduct, deleteProduct } = useProducts();
 
   const [searchQuery, setSearchQuery] = useState('');
@@ -71,9 +74,6 @@ export const ProductsPage: React.FC = () => {
                 <h1 className="text-3xl font-bold text-gold">Catalogue Produits</h1>
                 <p className="text-slate-400">Gérez vos produits with efficacité et élégance.</p>
               </div>
-              <button onClick={handleAddNew} className="bg-gold text-black font-bold py-2 px-4 rounded hover:bg-yellow-600 transition-colors">
-                Ajouter un produit
-              </button>
             </header>
 
             <div className="mb-8 p-4 glass-effect rounded-lg flex items-center gap-4">
@@ -117,7 +117,7 @@ export const ProductsPage: React.FC = () => {
           />
         );
       case 'stockView':
-        return <div>Vue Stock</div>;
+        return <StockView products={products} />;
       case 'categoryFilter':
         return <div>Filtre par catégorie</div>;
       default:
@@ -132,6 +132,12 @@ export const ProductsPage: React.FC = () => {
   return (
     <div className="products-page-container" style={{display: 'flex'}}>
       <div className="left-panel" style={{width: '250px', padding: '1rem', borderRight: '1px solid #2A2B2E'}}>
+        <button onClick={() => navigate('/dashboard')} className="flex items-center text-sm text-slate-400 hover:text-gold transition-colors mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          </svg>
+          Accueil
+        </button>
         <h1 className="text-2xl font-bold mb-4">Catalogue</h1>
         <div className="space-y-4">
             <CatalogTile title="Tous les produits" icon="view-grid" onClick={() => setActiveView('productList')} />
