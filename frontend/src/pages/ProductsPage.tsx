@@ -1,223 +1,125 @@
+import React, { useState, useMemo, useCallback } from 'react';
+import { useProducts } from '../hooks/useProducts';
+import { Product, Category } from '../types/types';
+import { ProductCard } from '../components/ProductCard';
+import { ProductForm } from '../components/ProductForm';
+import { ConfirmationDialog } from '../components/ConfirmationDialog';
+import { useDebounce } from '../hooks/useDebounce';
 
-import React, { useState, useEffect } from 'react';
-import { db } from '../config/firebase.config';
-import { collection, getDocs, addDoc, doc, updateDoc } from 'firebase/firestore';
-import ProductTile from '../components/ProductTile';
-import CatalogTile from '../components/CatalogTile';
-import './ProductsPage.css';
+export const ProductsPage: React.FC = () => {
+  const { products, categories, loading, error, addProduct, updateProduct, deleteProduct } = useProducts();
 
-interface Product {
-  id: string;
-  name: string;
-  category: string;
-  price: number;
-  stock: number;
-  description: string;
-  sku: string;
-  vatRate: number;
-  images: string[];
-  isActive: boolean;
-  createdAt?: any;
-  updatedAt?: any;
-  createdBy?: string;
-}
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<string>('All');
+  const [showForm, setShowForm] = useState(false);
+  const [editingProduct, setEditingProduct] = useState<Partial<Product> | null>(null);
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
+  const [deletingProduct, setDeletingProduct] = useState<Product | null>(null);
 
-const ProductsPage: React.FC = () => {
-  const [products, setProducts] = useState<Product[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState<string>('');
-  const [rightPanelView, setRightPanelView] = useState<'list' | 'edit' | 'new'>('list');
-  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  const debouncedSearchQuery = useDebounce(searchQuery, 300);
 
-  const [formData, setFormData] = useState<Omit<Product, 'id'>>({
-    name: '',
-    category: '',
-    price: 0,
-    stock: 0,
-    description: '',
-    sku: '',
-    vatRate: 0,
-    images: [],
-    isActive: true,
-  });
+  const filteredProducts = useMemo(() => {
+    return products
+      .filter(p => selectedCategory === 'All' || p.category === selectedCategory)
+      .filter(p => 
+        p.name.toLowerCase().includes(debouncedSearchQuery.toLowerCase()) ||
+        p.sku.toLowerCase().includes(debouncedSearchQuery.toLowerCase())
+      );
+  }, [products, selectedCategory, debouncedSearchQuery]);
 
-  const fetchProducts = async () => {
-    try {
-      setLoading(true);
-      setError(null);
-      const productsRef = collection(db, 'products');
-      const snapshot = await getDocs(productsRef);
-      const fetchedProducts: Product[] = snapshot.docs.map((doc: any) => ({
-        ...(doc.data() as Product),
-        id: doc.id,
-      }));
-      setProducts(fetchedProducts);
-    } catch (err: any) {
-      console.error("Error fetching products:", err);
-      setError(err.message || "Failed to fetch products.");
-    } finally {
-      setLoading(false);
+  const handleEdit = (product: Product) => {
+    setEditingProduct(product);
+    setShowForm(true);
+  };
+
+  const handleDeleteRequest = (product: Product) => {
+    setDeletingProduct(product);
+    setShowDeleteConfirm(true);
+  };
+
+  const handleDeleteConfirm = () => {
+    if (deletingProduct) {
+      deleteProduct(deletingProduct.id);
+      setShowDeleteConfirm(false);
+      setDeletingProduct(null);
     }
   };
 
-  useEffect(() => {
-    fetchProducts();
-  }, []);
-
-  useEffect(() => {
-    if (rightPanelView === 'edit' && selectedProduct) {
-      setFormData(selectedProduct);
-    } else if (rightPanelView === 'new') {
-      setFormData({
-        name: '', category: '', price: 0, stock: 0, description: '',
-        sku: '', vatRate: 0, images: [], isActive: true,
-      });
+  const handleSave = (productData: Partial<Product>) => {
+    if (productData.id) {
+      updateProduct(productData.id, productData);
+    } else {
+      addProduct(productData as Omit<Product, 'id'>);
     }
-  }, [rightPanelView, selectedProduct]);
-
-  const handleSelectProduct = (product: Product) => {
-    setSelectedProduct(product);
-    setRightPanelView('edit');
+    setShowForm(false);
+    setEditingProduct(null);
   };
 
   const handleAddNew = () => {
-    setSelectedProduct(null);
-    setRightPanelView('new');
-  };
-
-  const handleCancel = () => {
-    setRightPanelView('list');
-    setSelectedProduct(null);
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value, type } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: type === 'number' ? parseFloat(value) : value,
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-    setError(null);
-
-    try {
-      if (rightPanelView === 'edit' && selectedProduct && selectedProduct.id) {
-        const productRef = doc(db, 'products', selectedProduct.id);
-        await updateDoc(productRef, formData);
-      } else if (rightPanelView === 'new') {
-        await addDoc(collection(db, 'products'), {
-          ...formData,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-          createdBy: 'admin',
-        });
-      }
-      await fetchProducts();
-      setRightPanelView('list');
-    } catch (err: any) {
-      console.error("Error saving product:", err);
-      setError(err.message || "Failed to save product.");
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const filteredProducts = products.filter(product =>
-    product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    product.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    product.sku.toLowerCase().includes(searchQuery.toLowerCase())
-  );
-
-  const renderRightPanel = () => {
-    switch (rightPanelView) {
-      case 'list':
-        return (
-          <div>
-            <input
-              type="text"
-              placeholder="Rechercher..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full p-2 border rounded bg-slate-700 text-text mb-4"
-            />
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {filteredProducts.map(product => (
-                <ProductTile key={product.id} product={product} onClick={() => handleSelectProduct(product)} />
-              ))}
-            </div>
-          </div>
-        );
-      case 'new':
-      case 'edit':
-        return (
-          <div className="bg-gray-800 p-6 rounded-lg">
-            <h2 className="text-xl font-bold mb-4">{rightPanelView === 'new' ? 'Nouveau Produit' : 'Modifier le Produit'}</h2>
-            <form onSubmit={handleSubmit}>
-              <div className="mb-4">
-                <label className="block text-sm font-bold mb-2">Nom:</label>
-                <input type="text" name="name" value={formData.name} onChange={handleChange} className="shadow appearance-none border rounded w-full py-2 px-3 bg-gray-700 text-white leading-tight focus:outline-none focus:shadow-outline" required />
-              </div>
-              <div className="mb-4">
-                <label className="block text-sm font-bold mb-2">Catégorie:</label>
-                <input type="text" name="category" value={formData.category} onChange={handleChange} className="shadow appearance-none border rounded w-full py-2 px-3 bg-gray-700 text-white leading-tight focus:outline-none focus:shadow-outline" required />
-              </div>
-              <div className="mb-4">
-                <label className="block text-sm font-bold mb-2">Prix:</label>
-                <input type="number" name="price" value={formData.price} onChange={handleChange} className="shadow appearance-none border rounded w-full py-2 px-3 bg-gray-700 text-white leading-tight focus:outline-none focus:shadow-outline" required />
-              </div>
-              <div className="mb-4">
-                <label className="block text-sm font-bold mb-2">Stock:</label>
-                <input type="number" name="stock" value={formData.stock} onChange={handleChange} className="shadow appearance-none border rounded w-full py-2 px-3 bg-gray-700 text-white leading-tight focus:outline-none focus:shadow-outline" required />
-              </div>
-              <div className="mb-4">
-                <label className="block text-sm font-bold mb-2">Description:</label>
-                <textarea name="description" value={formData.description} onChange={handleChange} className="shadow appearance-none border rounded w-full py-2 px-3 bg-gray-700 text-white leading-tight focus:outline-none focus:shadow-outline"></textarea>
-              </div>
-              <div className="mb-4">
-                <label className="block text-sm font-bold mb-2">SKU:</label>
-                <input type="text" name="sku" value={formData.sku} onChange={handleChange} className="shadow appearance-none border rounded w-full py-2 px-3 bg-gray-700 text-white leading-tight focus:outline-none focus:shadow-outline" required />
-              </div>
-              <div className="mb-4">
-                <label className="block text-sm font-bold mb-2">Taux TVA:</label>
-                <input type="number" name="vatRate" value={formData.vatRate} onChange={handleChange} className="shadow appearance-none border rounded w-full py-2 px-3 bg-gray-700 text-white leading-tight focus:outline-none focus:shadow-outline" step="0.01" />
-              </div>
-              {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
-              <div className="flex justify-end gap-4">
-                <button type="button" onClick={handleCancel} className="bg-gray-600 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded">Annuler</button>
-                <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" disabled={loading}>
-                  {loading ? 'Sauvegarde...' : 'Sauvegarder'}
-                </button>
-              </div>
-            </form>
-          </div>
-        );
-      default:
-        return null;
-    }
+    setEditingProduct({});
+    setShowForm(true);
   };
 
   return (
-    <div className="products-page-grid">
-      {/* Left Column */}
-      <div className="left-panel">
-        <h1 className="text-2xl font-bold mb-4">Catalogue</h1>
-        <div className="space-y-4">
-            <CatalogTile title="Tous les produits" icon="view-grid" onClick={() => setRightPanelView('list')} />
-            <CatalogTile title="Nouveau Produit" icon="plus" onClick={handleAddNew} />
-            <CatalogTile title="Vue Stock" icon="chart-bar" onClick={() => { /* Implement stock view */ }} />
-            <CatalogTile title="Catégories" icon="tag" onClick={() => { /* Implement category filter */ }} />
+    <div className="p-8 bg-bg text-text min-h-screen">
+      <header className="flex justify-between items-center mb-8">
+        <div>
+          <h1 className="text-3xl font-bold text-gold">Catalogue Produits</h1>
+          <p className="text-slate-400">Gérez vos produits avec efficacité et élégance.</p>
         </div>
+        <button onClick={handleAddNew} className="bg-gold text-black font-bold py-2 px-4 rounded hover:bg-yellow-600 transition-colors">
+          Ajouter un produit
+        </button>
+      </header>
+
+      <div className="mb-8 p-4 glass-effect rounded-lg flex items-center gap-4">
+        <input
+          type="text"
+          placeholder="Rechercher par nom ou SKU..."
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          className="flex-grow p-2 bg-slate-800 border border-slate-700 rounded-md focus:outline-none focus:ring-2 focus:ring-gold"
+        />
+        <select 
+          value={selectedCategory} 
+          onChange={(e) => setSelectedCategory(e.target.value)}
+          className="p-2 bg-slate-800 border border-slate-700 rounded-md focus:outline-none focus:ring-2 focus:ring-gold"
+        >
+          <option value="All">Toutes les catégories</option>
+          {categories.map(cat => <option key={cat.id} value={cat.name}>{cat.name}</option>)}
+        </select>
+        <span className="text-slate-400">{filteredProducts.length} résultats</span>
       </div>
 
-      {/* Right Column */}
-      <div className="right-panel">
-        {loading && <p>Chargement...</p>}
-        {!loading && renderRightPanel()}
-      </div>
+      {loading && <div className="text-center p-8">Chargement des produits...</div>}
+      {error && <div className="text-center p-8 text-red-500">Erreur: {error}</div>}
+
+      {!loading && !error && (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filteredProducts.map(product => (
+            <ProductCard key={product.id} product={product} onEdit={handleEdit} onDelete={handleDeleteRequest} />
+          ))}
+        </div>
+      )}
+
+      {showForm && (
+        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-40">
+          <ProductForm 
+            product={editingProduct} 
+            categories={categories} 
+            onSave={handleSave} 
+            onCancel={() => setShowForm(false)} 
+          />
+        </div>
+      )}
+
+      <ConfirmationDialog 
+        isOpen={showDeleteConfirm}
+        onConfirm={handleDeleteConfirm}
+        onCancel={() => setShowDeleteConfirm(false)}
+        title="Confirmer la suppression"
+        message={`Êtes-vous sûr de vouloir supprimer le produit "${deletingProduct?.name}" ? Cette action est irréversible.`}
+      />
     </div>
   );
 };
