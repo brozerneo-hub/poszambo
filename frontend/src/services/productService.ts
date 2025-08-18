@@ -68,7 +68,7 @@ export const productService = {
   ): (() => void) => {
     const q = query(categoriesCollection);
     const unsubscribe = onSnapshot(q, (snapshot: QuerySnapshot<DocumentData>) => {
-      const categories = snapshot.docs.map(doc => ({ ...doc.data(), id: doc.id } as Category));
+      const categories = snapshot.docs.map((doc: any) => ({ ...doc.data(), id: doc.id } as Category));
       callback(categories);
     });
     return unsubscribe;

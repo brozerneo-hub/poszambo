@@ -51,5 +51,6 @@ app.use('/auth', auth_routes_1.default);
 app.use('/products', products_routes_1.default);
 app.use('/sales', sales_routes_1.default);
 app.use('/status', status_routes_1.default);
+app.get('/test', (req, res) => res.send('Test OK'));
 exports.api = functions.https.onRequest(app);
 //# sourceMappingURL=index.js.map

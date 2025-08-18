@@ -55,7 +55,7 @@ const useCatalogData = () => {
         // Fetch categories
         const categoriesRef = collection(db, 'categories');
         const categoriesSnapshot = await getDocs(categoriesRef);
-        const categories = categoriesSnapshot.docs.map(doc => doc.data().name as string);
+        const categories = categoriesSnapshot.docs.map((doc: any) => doc.data().name as string);
 
         setData({
           totalProducts,
