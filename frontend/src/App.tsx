@@ -1,8 +1,9 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import SalesPage from "./pages/SalesPage";
 import LoginPage from "./pages/LoginPage";
-
 import DashboardPage from "./pages/DashboardPage";
+import StyleGuidePage from "./pages/StyleGuide";
+import ProductsPage from "./pages/ProductsPage"; // New import
 
 export default function App() {
 return (
@@ -11,6 +12,8 @@ return (
 <Route path="/login" element={<LoginPage/>} />
 <Route path="/dashboard" element={<DashboardPage/>} />
 <Route path="/sales" element={<SalesPage/>} />
+<Route path="/products" element={<ProductsPage />} /> {/* New route */}
+<Route path="/styleguide" element={<StyleGuidePage />} />
 <Route path="*" element={<Navigate to="/login" replace />} />
 </Routes>
 </BrowserRouter>

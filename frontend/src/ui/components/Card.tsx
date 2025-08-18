@@ -1,9 +1,18 @@
-import { ReactNode } from "react";
+import React from 'react';
 
-export function Card({ children, className }: { children: ReactNode; className?: string }) {
+interface CardProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+export const Card: React.FC<CardProps> = ({ children, className }) => {
   return (
-    <div className={twMerge("rounded-xl border border-[color:var(--slate)]/60 bg-black/40 backdrop-blur-sm shadow-lg p-6", className)}>
+    <div
+      className={`rounded-xl border border-slate/60 bg-black/40 backdrop-blur-sm shadow-lg ${
+        className || ''
+      }`}
+    >
       {children}
     </div>
   );
-}
+};

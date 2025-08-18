@@ -12,7 +12,7 @@ const router = Router();
 
 router.route('/')
     .post(protect, authorize('admin', 'manager'), createProduct)
-    .get(protect, getProducts);
+    .get(getProducts);
 
 router.route('/:id')
     .get(protect, getProduct)

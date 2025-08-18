@@ -1,19 +1,29 @@
-import { twMerge } from "tailwind-merge";
-import { ButtonHTMLAttributes } from "react";
+import React from 'react';
 
-type Props = ButtonHTMLAttributes<HTMLButtonElement> & { variant?: "primary" | "ghost" };
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: 'primary' | 'ghost';
+}
 
-export function Button({ className, variant = "primary", ...props }: Props) {
-  const base = "px-4 py-2 rounded-md transition-all duration-180 ease-in-out outline-offset-2 focus:outline focus:outline-2";
-  const variants = {
-    primary: "bg-[var(--gold)] text-black hover:opacity-90 focus:outline-[var(--gold)]",
-    ghost: "bg-transparent text-[var(--text)] border border-[var(--slate)] hover:bg-[var(--slate)]/40 focus:outline-[var(--slate)]",
+export const Button: React.FC<ButtonProps> = ({
+  variant = 'primary',
+  className,
+  children,
+  ...props
+}) => {
+  const baseStyles =
+    'inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-semibold transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-bg focus:ring-gold disabled:opacity-50 disabled:cursor-not-allowed';
+
+  const variantStyles = {
+    primary: 'bg-gold text-bg hover:opacity-90',
+    ghost: 'bg-transparent border border-slate text-text hover:bg-slate/40',
   };
 
   return (
     <button
-      className={twMerge(base, variants[variant], className)}
+      className={`${baseStyles} ${variantStyles[variant]} ${className || ''}`}
       {...props}
-    />
+    >
+      {children}
+    </button>
   );
-}
+};

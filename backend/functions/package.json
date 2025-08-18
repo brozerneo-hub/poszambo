@@ -9,7 +9,7 @@
     "start": "npm run shell",
     "deploy": "firebase deploy --only functions",
     "logs": "firebase functions:log",
-    "create-admin": "cross-env GCLOUD_PROJECT=poszambo FIRESTORE_EMULATOR_HOST=127.0.0.1:8180 ts-node src/scripts/createAdmin.ts",
+    "create-admin": "cross-env GCLOUD_PROJECT=dreampos-94155 FIRESTORE_EMULATOR_HOST=127.0.0.1:8180 ts-node src/scripts/createAdmin.ts",
     "read-admin": "cross-env GCLOUD_PROJECT=poszambo FIRESTORE_EMULATOR_HOST=127.0.0.1:8180 ts-node src/scripts/readAdmin.ts"
   },
   "dependencies": {

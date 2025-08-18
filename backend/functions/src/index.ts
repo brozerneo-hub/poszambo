@@ -17,4 +17,6 @@ app.use('/products', productRoutes);
 app.use('/sales', saleRoutes);
 app.use('/status', statusRoutes);
 
+app.get('/test', (req, res) => res.send('Test OK'));
+
 export const api = functions.https.onRequest(app);

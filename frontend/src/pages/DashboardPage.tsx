@@ -1,33 +1,61 @@
-import { Card } from "../ui/components/Card";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import { HeaderWelcome } from '../ui/components/HeaderWelcome';
+import { Tile } from '../ui/components/Tile';
+import './DashboardPage.css'; // Import the CSS file
+import CatalogTile from '../components/CatalogTile';
 
-export default function DashboardPage() {
+const DashboardPage: React.FC = () => {
+  const navigate = useNavigate();
+  const user = { name: 'Sébastien' }; // Mock user
+
+  const handleLogout = () => {
+    console.log('Logout');
+    navigate('/login');
+  };
+
+  const tiles = [
+    { icon: 'sale', title: 'Vente', subtitle: 'Encaisser un client', onClick: () => navigate('/sales'), badge: 0 },
+    { icon: 'clients', title: 'Clients', subtitle: 'Gérer les fiches', onClick: () => navigate('/clients'), badge: 0 },
+    { icon: 'inventory', title: 'Inventaire', subtitle: 'Consulter le stock', onClick: () => navigate('/inventory'), badge: 1 },
+    { icon: 'orders', title: 'Commandes', subtitle: 'Suivre les livraisons', onClick: () => navigate('/orders'), badge: 3 },
+    { icon: 'website', title: 'Site Web', subtitle: 'Gérer la boutique', onClick: () => navigate('/website'), badge: 0 },
+    { icon: 'catalog', title: 'Catalogue', subtitle: 'Modifier les produits', onClick: () => navigate('/products'), badge: 0 },
+    { icon: 'stats', title: 'Statistiques', subtitle: 'Analyser les ventes', onClick: () => navigate('/stats'), badge: 0 },
+    { icon: 'admin', title: 'Admin Magasin', subtitle: 'Paramètres & Staff', onClick: () => navigate('/admin'), badge: 0 },
+  ];
+
   return (
-    <div className="min-h-screen bg-[var(--bg)] text-[var(--text)] p-6">
-      <h1 className="text-3xl font-serif text-[var(--gold)] mb-6">Tableau de bord</h1>
-      <div className="grid grid-cols-3 gap-6">
-        <Card>
-          <h2 className="text-lg font-semibold mb-2">Ventes du jour</h2>
-          <p className="text-2xl font-bold">1 245 €</p>
-        </Card>
-        <Card>
-          <h2 className="text-lg font-semibold mb-2">Panier moyen</h2>
-          <p className="text-2xl font-bold">83 €</p>
-        </Card>
-        <Card>
-          <h2 className="text-lg font-semibold mb-2">Top produits</h2>
-          <ul className="text-sm list-disc list-inside">
-            <li>Montre Classique Or</li>
-            <li>Parfum Oud 50ml</li>
-            <li>Bague Or & Diamant</li>
-          </ul>
-        </Card>
-      </div>
-
-      <div className="mt-8 flex gap-4">
-        <Link to="/sales" className="px-4 py-2 bg-[var(--gold)] text-black rounded-md">Nouvelle vente</Link>
-        <Link to="/products" className="px-4 py-2 border border-[var(--gold)] text-[var(--gold)] rounded-md">Produits</Link>
-      </div>
+    <div className="min-h-screen bg-bg text-text p-4 sm:p-6 lg:p-8">
+      <HeaderWelcome name={user.name} onLogout={handleLogout} />
+      <main>
+        <h2 className="text-center text-sm uppercase tracking-widest text-text/60 mb-8">
+          QUE SOUHAITEZ-VOUS FAIRE ?
+        </h2>
+        <div className="dashboard-grid"> {/* Use the new CSS class */}
+          {tiles.map((tile) => (
+            tile.title === 'Catalogue' ? (
+              <CatalogTile
+                key={tile.title}
+                title={tile.title}
+                onClick={tile.onClick} // Pass onClick prop
+                icon={tile.icon} // Pass icon prop
+              />
+            ) : (
+              <Tile
+                key={tile.title}
+                icon={tile.icon as any}
+                title={tile.title}
+                subtitle={tile.subtitle}
+                badge={tile.badge}
+                onClick={tile.onClick}
+              />
+            )
+          ))}
+        </div>
+      </main>
     </div>
   );
-}
+};
+
+export default DashboardPage;
