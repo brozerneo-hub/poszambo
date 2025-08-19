@@ -22,5 +22,14 @@ export interface Category {
   name: string;
   description: string;
   sortOrder: number;
-  isActive: boolean;
+    isActive: boolean;
 }
+
+export interface Store {
+  id: string;
+  name: string;
+  address: string;
+  salesCount: number;
+  stockQuantity: number;
+}
+

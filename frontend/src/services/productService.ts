@@ -1,4 +1,3 @@
-
 import { db } from '../config/firebase.config';
 import {
   collection,
@@ -55,8 +54,10 @@ export const productService = {
   subscribeToProducts: (
     callback: (products: Product[]) => void
   ): (() => void) => {
+    console.log('Subscribing to products...');
     const q = query(productsCollection);
     const unsubscribe = onSnapshot(q, (snapshot: QuerySnapshot<DocumentData>) => {
+      console.log('Received products snapshot:', snapshot.size);
       const products = snapshot.docs.map(doc => ({ ...doc.data(), id: doc.id } as Product));
       callback(products);
     });

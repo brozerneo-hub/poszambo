@@ -70,4 +70,11 @@ export interface Client {
     loyaltyCardNumber?: string;
     marketingConsent?: boolean;
 }
+export interface Store {
+    id: string;
+    name: string;
+    address: string;
+    salesCount: number;
+    stockQuantity: number;
+}
 //# sourceMappingURL=types.d.ts.map

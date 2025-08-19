@@ -4,6 +4,7 @@ import LoginPage from "./pages/LoginPage";
 import DashboardPage from "./pages/DashboardPage";
 import StyleGuidePage from "./pages/StyleGuide";
 import ProductsPage from "./pages/ProductsPage"; // New import
+import StoresPage from "./pages/StoresPage";
 
 export default function App() {
 return (
@@ -14,6 +15,7 @@ return (
 <Route path="/sales" element={<SalesPage/>} />
 <Route path="/products" element={<ProductsPage />} /> {/* New route */}
 <Route path="/styleguide" element={<StyleGuidePage />} />
+<Route path="/stores" element={<StoresPage />} />
 <Route path="*" element={<Navigate to="/login" replace />} />
 </Routes>
 </BrowserRouter>

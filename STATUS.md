@@ -177,3 +177,18 @@ firebase deploy --only hosting
 | Firebase | 10.3.1 | ✔ Latest | |
 | TailwindCSS | 3.3.0 | ✔ Latest | |
 | TypeScript | 5.1.6 | ✔ Latest | |
+
+### 2025-08-19 - Store Management & Disclaimer Integration
+
+- **Frontend - Login Page**: Integrated disclaimer content directly into `LoginPage.tsx` below the login form. Added store selection dropdown.
+- **Frontend - Store Management**:
+  - Created `StoresPage.tsx` for CRUD operations on stores, using a tile-like display.
+  - Updated `DashboardPage.tsx` to navigate to `/stores` from the "Admin Magasin" tile.
+  - Created generic `Modal.tsx` component (`frontend/src/ui/components/Modal.tsx`).
+  - Modified `Button.tsx` (`frontend/src/ui/components/Button.tsx`) to support `secondary` and `danger` variants.
+  - Added `Store` interface to `frontend/src/types/types.ts` for frontend type safety.
+- **Backend - Store Management**:
+  - Defined `Store` interface in `backend/src/types.ts`.
+  - Implemented CRUD functions for stores in `backend/src/stores.ts`.
+  - Added API routes for stores (GET, POST, PUT, DELETE) in `backend/src/index.ts`.
+- **Infrastructure**: Created `firestore.rules` and `firestore.indexes.json` in the project root.

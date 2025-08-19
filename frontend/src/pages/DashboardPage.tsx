@@ -22,7 +22,7 @@ const DashboardPage: React.FC = () => {
     { icon: 'website', title: 'Site Web', subtitle: 'Gérer la boutique', onClick: () => navigate('/website'), badge: 0 },
     { icon: 'catalog', title: 'Catalogue', subtitle: 'Modifier les produits', onClick: () => navigate('/products'), badge: 0 },
     { icon: 'stats', title: 'Statistiques', subtitle: 'Analyser les ventes', onClick: () => navigate('/stats'), badge: 0 },
-    { icon: 'admin', title: 'Admin Magasin', subtitle: 'Paramètres & Staff', onClick: () => navigate('/admin'), badge: 0 },
+    { icon: 'admin', title: 'Admin Magasin', subtitle: 'Paramètres & Staff', onClick: () => navigate('/stores'), badge: 0 },
   ];
 
   return (

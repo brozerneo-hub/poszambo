@@ -78,3 +78,11 @@ export interface Client {
   loyaltyCardNumber?: string; // Numéro de carte de fidélité ou code externe
   marketingConsent?: boolean; // Consentement pour le marketing
 }
+
+export interface Store {
+  id: string;
+  name: string;
+  address: string;
+  salesCount: number;
+  stockQuantity: number;
+}

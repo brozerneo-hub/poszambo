@@ -10,6 +10,7 @@ const JWT_SECRET = 'your_jwt_secret'; // TODO: Replace with a strong, environmen
 import { getUserByUsername, addUser, updateUserRole, updateUserPassword, deleteUser, getAllUsers } from './auth.js';
 import { getAllProducts, getProductById, addProduct, updateProduct, deleteProduct, updateProductStock } from './products.js';
 import { getAllClients, getClientById, addClient, updateClient, deleteClient } from './clients.js';
+import { getAllStores, getStoreById, addStore, updateStore, deleteStore } from './stores.js';
 import { createCart, addToCart, removeFromCart, updateItemQuantity } from './cart.js';
 import { addSale, getAllSales, createSaleItemFromCartItem } from './sales.js';
 import { processReturn } from './returns.js';
@@ -231,6 +232,77 @@ app.delete('/clients/:clientId', authorize(['manager', 'admin']), async (req, re
     }
     catch (error) {
         console.error('Error deleting client:', error);
+        res.status(500).send('Internal Server Error');
+    }
+});
+// --- Routes pour les magasins ---
+app.get('/stores', authorize(['manager', 'admin']), async (req, res) => {
+    try {
+        const storesList = await getAllStores(db);
+        res.json(storesList);
+    }
+    catch (error) {
+        console.error('Error fetching stores:', error);
+        res.status(500).send('Internal Server Error');
+    }
+});
+app.get('/stores/:id', authorize(['manager', 'admin']), async (req, res) => {
+    try {
+        const store = await getStoreById(db, req.params.id);
+        if (store)
+            res.json(store);
+        else
+            res.status(404).send('Store not found');
+    }
+    catch (error) {
+        console.error('Error fetching store by ID:', error);
+        res.status(500).send('Internal Server Error');
+    }
+});
+app.post('/stores', authorize(['admin']), async (req, res) => {
+    const newStoreData = req.body;
+    if (!newStoreData || !newStoreData.name || !newStoreData.address) {
+        return res.status(400).send('Store name and address are required');
+    }
+    try {
+        const store = await addStore(db, newStoreData);
+        res.status(201).json(store);
+    }
+    catch (error) {
+        console.error('Error adding store:', error);
+        res.status(500).send('Internal Server Error');
+    }
+});
+app.put('/stores/:storeId', authorize(['admin']), async (req, res) => {
+    const storeId = req.params.storeId;
+    const updatedStoreData = req.body;
+    try {
+        const updatedStore = await updateStore(db, storeId, updatedStoreData);
+        if (updatedStore) {
+            res.status(200).json(updatedStore);
+        }
+        else {
+            res.status(404).send('Store not found');
+        }
+    }
+    catch (error) {
+        console.error('Error updating store:', error);
+        res.status(500).send('Internal Server Error');
+    }
+});
+app.delete('/stores/:storeId', authorize(['admin']), async (req, res) => {
+    const storeId = req.params.storeId;
+    try {
+        const success = await deleteStore(db, storeId);
+        if (success) {
+            res.status(200).send('Store deleted');
+        }
+        else {
+            res.status(404).send('Store not found');
+        }
+    }
+    catch (error) {
+        console.error('Error deleting store:', error);
         res.status(500).send('Internal Server Error');
     }
 });

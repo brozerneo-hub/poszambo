@@ -1,0 +1,62 @@
+[debug] [2025-08-19T06:07:56.558Z] ----------------------------------------------------------------------
+[debug] [2025-08-19T06:07:56.567Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\szamb\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start --only functions
+[debug] [2025-08-19T06:07:56.568Z] CLI Version:   14.12.0
+[debug] [2025-08-19T06:07:56.569Z] Platform:      win32
+[debug] [2025-08-19T06:07:56.569Z] Node Version:  v22.17.0
+[debug] [2025-08-19T06:07:56.570Z] Time:          Tue Aug 19 2025 08:07:56 GMT+0200 (heure d’été d’Europe centrale)
+[debug] [2025-08-19T06:07:56.571Z] ----------------------------------------------------------------------
+[debug] 
+[warn] !  functions: The functions emulator is configured but there is no functions source directory. Have you run firebase init functions? {"metadata":{"emulator":{"name":"functions"},"message":"The functions emulator is configured but there is no functions source directory. Have you run \u001b[1mfirebase init functions\u001b[22m?"}}
+[debug] [2025-08-19T06:07:57.507Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-08-19T06:07:57.507Z] > authorizing via signed-in user (brozerneo@gmail.com)
+[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
+[debug] [2025-08-19T06:07:58.455Z] assigned listening specs for emulators {"user":{"logging":[{"address":"127.0.0.1","family":"IPv4","port":4502}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[warn] !  functions: The functions emulator is configured but there is no functions source directory. Have you run firebase init functions? {"metadata":{"emulator":{"name":"functions"},"message":"The functions emulator is configured but there is no functions source directory. Have you run \u001b[1mfirebase init functions\u001b[22m?"}}
+[warn] !  emulators: The Emulator UI is not starting, either because none of the running emulators have a UI component or the Emulator UI cannot determine the Project ID. Pass the --project flag to specify a project. {"metadata":{"emulator":{"name":"hub"},"message":"The Emulator UI is not starting, either because none of the running emulators have a UI component or the Emulator UI cannot determine the Project ID. Pass the --project flag to specify a project."}}
+[debug] [2025-08-19T06:07:58.536Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: . If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬──────────────────────────────────┐
+│ Emulator  │ Host:Port                        │
+├───────────┼──────────────────────────────────┤
+│ Functions │ Failed to initialize (see above) │
+└───────────┴──────────────────────────────────┘
+  Emulator Hub not running.
+  Other reserved ports: 4502
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2025-08-19T06:10:32.513Z] ----------------------------------------------------------------------
+[debug] [2025-08-19T06:10:32.521Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\szamb\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start --only functions
+[debug] [2025-08-19T06:10:32.522Z] CLI Version:   14.12.0
+[debug] [2025-08-19T06:10:32.522Z] Platform:      win32
+[debug] [2025-08-19T06:10:32.523Z] Node Version:  v22.17.0
+[debug] [2025-08-19T06:10:32.523Z] Time:          Tue Aug 19 2025 08:10:32 GMT+0200 (heure d’été d’Europe centrale)
+[debug] [2025-08-19T06:10:32.524Z] ----------------------------------------------------------------------
+[debug] 
+[warn] !  functions: The functions emulator is configured but there is no functions source directory. Have you run firebase init functions? {"metadata":{"emulator":{"name":"functions"},"message":"The functions emulator is configured but there is no functions source directory. Have you run \u001b[1mfirebase init functions\u001b[22m?"}}
+[debug] [2025-08-19T06:10:33.085Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-08-19T06:10:33.086Z] > authorizing via signed-in user (brozerneo@gmail.com)
+[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
+[debug] [2025-08-19T06:10:33.632Z] assigned listening specs for emulators {"user":{"logging":[{"address":"127.0.0.1","family":"IPv4","port":4502}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[warn] !  functions: The functions emulator is configured but there is no functions source directory. Have you run firebase init functions? {"metadata":{"emulator":{"name":"functions"},"message":"The functions emulator is configured but there is no functions source directory. Have you run \u001b[1mfirebase init functions\u001b[22m?"}}
+[warn] !  emulators: The Emulator UI is not starting, either because none of the running emulators have a UI component or the Emulator UI cannot determine the Project ID. Pass the --project flag to specify a project. {"metadata":{"emulator":{"name":"hub"},"message":"The Emulator UI is not starting, either because none of the running emulators have a UI component or the Emulator UI cannot determine the Project ID. Pass the --project flag to specify a project."}}
+[debug] [2025-08-19T06:10:33.691Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: . If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬──────────────────────────────────┐
+│ Emulator  │ Host:Port                        │
+├───────────┼──────────────────────────────────┤
+│ Functions │ Failed to initialize (see above) │
+└───────────┴──────────────────────────────────┘
+  Emulator Hub not running.
+  Other reserved ports: 4502
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
