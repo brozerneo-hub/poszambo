@@ -38,19 +38,25 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.api = void 0;
 const functions = __importStar(require("firebase-functions"));
-const express_1 = __importDefault(require("express"));
+const express_1 = __importStar(require("express"));
 const cors_1 = __importDefault(require("cors"));
 const auth_routes_1 = __importDefault(require("./api/routes/auth.routes"));
 const products_routes_1 = __importDefault(require("./api/routes/products.routes"));
 const sales_routes_1 = __importDefault(require("./api/routes/sales.routes"));
 const status_routes_1 = __importDefault(require("./api/routes/status.routes"));
-const app = (0, express_1.default)();
-app.use((0, cors_1.default)({ origin: true }));
-app.use(express_1.default.json());
-app.use('/auth', auth_routes_1.default);
-app.use('/products', products_routes_1.default);
-app.use('/sales', sales_routes_1.default);
-app.use('/status', status_routes_1.default);
-app.get('/test', (req, res) => res.send('Test OK'));
-exports.api = functions.https.onRequest(app);
+const stores_routes_1 = __importDefault(require("./api/routes/stores.routes"));
+const main = (0, express_1.default)();
+const apiRouter = (0, express_1.Router)();
+main.use((0, cors_1.default)({ origin: true }));
+main.use(express_1.default.json());
+// Mount the specific routes on the apiRouter
+apiRouter.use('/auth', auth_routes_1.default);
+apiRouter.use('/products', products_routes_1.default);
+apiRouter.use('/sales', sales_routes_1.default);
+apiRouter.use('/status', status_routes_1.default);
+apiRouter.use('/stores', stores_routes_1.default);
+apiRouter.get('/test', (req, res) => res.send('API Test OK'));
+// Mount the apiRouter under the /api path
+main.use('/api', apiRouter);
+exports.api = functions.https.onRequest(main);
 //# sourceMappingURL=index.js.map

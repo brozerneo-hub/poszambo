@@ -19,13 +19,13 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-console.log("Connexion à l'émulateur Firestore...");
-try {
-    connectFirestoreEmulator(db, 'localhost', 8180);
-    console.log("✅ Connecté à l'émulateur Firestore.");
-} catch (e) {
-    console.warn("⚠️ L'émulateur semble déjà connecté. On continue...");
-}
+// console.log("Connexion à l'émulateur Firestore...");
+// try {
+//     connectFirestoreEmulator(db, 'localhost', 8180);
+//    console.log("✅ Connecté à l'émulateur Firestore.");
+// } catch (e) {
+//     console.warn("⚠️ L'émulateur semble déjà connecté. On continue...");
+// }
 
 
 // Données de test pour les catégories

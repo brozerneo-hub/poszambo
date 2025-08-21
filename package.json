@@ -2,7 +2,9 @@
   "name": "pos-system-root",
   "version": "1.0.0",
   "scripts": {
-    "emulate": "cross-env PATH=\"C:\\Program Files\\Java\\jdk-21\\bin;%PATH%\" firebase emulators:start --only functions,firestore,auth,ui"
+    "emulate": "cross-env PATH=\"C:\\Program Files\\Java\\jdk-21\\bin;%PATH%\" firebase emulators:start --import=./firestore-data --export-on-exit --only functions,firestore,auth,ui,hosting",
+    "build": "npm run build --prefix backend && npm run build --prefix backend/functions",
+    "start": "npm run build && npm run emulate"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",

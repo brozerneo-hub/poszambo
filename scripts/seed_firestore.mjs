@@ -21,7 +21,7 @@ const db = getFirestore(app);
 
 console.log("Connexion à l émulateur Firestore...");
 try {
-    connectFirestoreEmulator(db, 'localhost', 8180);
+    connectFirestoreEmulator(db, 'localhost', 8181);
     console.log("✅ Connecté à l émulateur Firestore.");
 } catch (e) {
     console.warn("⚠️ L émulateur semble déjà connecté. On continue...");
@@ -168,9 +168,12 @@ async function seedFirestore() {
   } catch (error) {
     console.error("💥 Erreur lors de l'initialisation:", error);
   } finally {
-      console.log(`\n--- Script terminé. Statut: ${success ? 'SUCCÈS' : 'ÉCHEC'} ---");
+      console.log(`\n--- Script terminé. Statut: ${success ? 'SUCCÈS' : 'ÉCHEC'} ---
+`);
   }
 }
 
 // Lancer le script
-seedFirestore();
+(async () => {
+  await seedFirestore();
+})();

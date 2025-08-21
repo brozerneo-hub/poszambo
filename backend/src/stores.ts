@@ -1,5 +1,4 @@
 import { Store } from './types.js';
-import * as admin from 'firebase-admin';
 
 export const getStoreById = async (db: FirebaseFirestore.Firestore, storeId: string): Promise<Store | undefined> => {
   const doc = await db.collection('stores').doc(storeId).get();

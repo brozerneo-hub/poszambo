@@ -1,22 +1,29 @@
 import * as functions from 'firebase-functions';
-import express from 'express';
+import express, { Router } from 'express';
 import cors from 'cors';
 
 import authRoutes from './api/routes/auth.routes';
 import productRoutes from './api/routes/products.routes';
 import saleRoutes from './api/routes/sales.routes';
 import statusRoutes from './api/routes/status.routes';
+import storesRoutes from './api/routes/stores.routes';
 
-const app = express();
+const main = express();
+const apiRouter = Router();
 
-app.use(cors({ origin: true }));
-app.use(express.json());
+main.use(cors({ origin: true }));
+main.use(express.json());
 
-app.use('/auth', authRoutes);
-app.use('/products', productRoutes);
-app.use('/sales', saleRoutes);
-app.use('/status', statusRoutes);
+// Mount the specific routes on the apiRouter
+apiRouter.use('/auth', authRoutes);
+apiRouter.use('/products', productRoutes);
+apiRouter.use('/sales', saleRoutes);
+apiRouter.use('/status', statusRoutes);
+apiRouter.use('/stores', storesRoutes);
 
-app.get('/test', (req, res) => res.send('Test OK'));
+apiRouter.get('/test', (req, res) => res.send('API Test OK'));
 
-export const api = functions.https.onRequest(app);
+// Mount the apiRouter under the /api path
+main.use('/api', apiRouter);
+
+export const api = functions.https.onRequest(main);

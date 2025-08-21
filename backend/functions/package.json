@@ -19,7 +19,8 @@
     "firebase-admin": "^12.1.0",
     "firebase-functions": "^6.4.0",
     "joi": "^17.13.1",
-    "jsonwebtoken": "^9.0.2"
+    "jsonwebtoken": "^9.0.2",
+    "pos-system-root": "file:../.."
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.2",

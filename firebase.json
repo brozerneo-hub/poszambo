@@ -15,8 +15,12 @@
     ],
     "rewrites": [
       {
-        "source": "**",
+        "source": "/api/**",
         "function": "api"
+      },
+      {
+        "source": "**",
+        "destination": "/index.html"
       }
     ]
   },
@@ -28,14 +32,15 @@
       "port": 5101
     },
     "firestore": {
-      "port": 8180
+      "port": 8181
     },
     "hosting": {
       "port": 5100
     },
     "ui": {
       "enabled": true,
-      "port": 4100
-    }
+      "port": 4102
+    },
+    "singleProjectMode": true
   }
 }

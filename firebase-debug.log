@@ -1,0 +1,384 @@
+[debug] [2025-08-21T07:23:45.718Z] ----------------------------------------------------------------------
+[debug] [2025-08-21T07:23:45.724Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\szamb\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start --import=./firestore-data --export-on-exit --only functions,firestore,auth,ui,hosting
+[debug] [2025-08-21T07:23:45.724Z] CLI Version:   14.12.0
+[debug] [2025-08-21T07:23:45.725Z] Platform:      win32
+[debug] [2025-08-21T07:23:45.725Z] Node Version:  v22.17.0
+[debug] [2025-08-21T07:23:45.726Z] Time:          Thu Aug 21 2025 09:23:45 GMT+0200 (heure d’été d’Europe centrale)
+[debug] [2025-08-21T07:23:45.726Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-08-21T07:23:46.323Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-08-21T07:23:46.323Z] > authorizing via signed-in user (brozerneo@gmail.com)
+[debug] [2025-08-21T07:23:46.889Z] java version "21.0.8" 2025-07-15 LTS
+Java(TM) SE Runtime Environment (build 21.0.8+12-LTS-250)
+Java HotSpot(TM) 64-Bit Server VM (build 21.0.8+12-LTS-250, mixed mode, sharing)
+
+[debug] [2025-08-21T07:23:46.891Z] Parsed Java major version: 21
+[info] i  emulators: Starting emulators: auth, functions, firestore, hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: auth, functions, firestore, hosting"}}
+[warn] !  ui: Not starting the ui emulator, make sure you have run firebase init. {"metadata":{"emulator":{"name":"ui"},"message":"Not starting the \u001b[1mui\u001b[22m emulator, make sure you have run \u001b[1mfirebase init\u001b[22m."}}
+[debug] [2025-08-21T07:23:46.925Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-08-21T07:23:46.925Z] [auth] Authentication Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-08-21T07:23:46.925Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-08-21T07:23:46.925Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-08-21T07:23:46.926Z] [hosting] Hosting Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-08-21T07:23:46.926Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4102},{"address":"::1","family":"IPv6","port":4102}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9199}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8181}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5100}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2025-08-21T07:23:46.937Z] [hub] writing locator at C:\Users\szamb\AppData\Local\Temp\hub-dreampos-94155.json
+[debug] [2025-08-21T07:23:46.972Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-08-21T07:23:46.972Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-08-21T07:23:46.973Z] [tasks] Cloud Tasks Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-08-21T07:23:46.973Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4102},{"address":"::1","family":"IPv6","port":4102}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9199}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8181}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5100}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5101}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}],"tasks":[{"address":"127.0.0.1","family":"IPv4","port":9499}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: apphosting, database, pubsub, storage, dataconnect {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mapphosting, database, pubsub, storage, dataconnect\u001b[22m"}}
+[debug] [2025-08-21T07:23:47.029Z] defaultcredentials: writing to file C:\Users\szamb\AppData\Roaming\firebase\brozerneo_gmail_com_application_default_credentials.json
+[debug] [2025-08-21T07:23:47.032Z] Setting GAC to C:\Users\szamb\AppData\Roaming\firebase\brozerneo_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\szamb\\AppData\\Roaming\\firebase\\brozerneo_gmail_com_application_default_credentials.json"}}
+[debug] [2025-08-21T07:23:47.034Z] Checked if tokens are valid: false, expires at: 1755760651157
+[debug] [2025-08-21T07:23:47.035Z] Checked if tokens are valid: false, expires at: 1755760651157
+[debug] [2025-08-21T07:23:47.035Z] > refreshing access token with scopes: []
+[debug] [2025-08-21T07:23:47.039Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-08-21T07:23:47.039Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-08-21T07:23:47.392Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-08-21T07:23:47.392Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-08-21T07:23:47.422Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/dreampos-94155/adminSdkConfig [none]
+[debug] [2025-08-21T07:23:47.851Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/dreampos-94155/adminSdkConfig 200
+[debug] [2025-08-21T07:23:47.851Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/dreampos-94155/adminSdkConfig {"projectId":"dreampos-94155","storageBucket":"dreampos-94155.firebasestorage.app"}
+[info] i  firestore: Importing data from C:\Users\szamb\pos-system\firestore-data\firestore_export\firestore_export.overall_export_metadata {"metadata":{"emulator":{"name":"firestore"},"message":"Importing data from C:\\Users\\szamb\\pos-system\\firestore-data\\firestore_export\\firestore_export.overall_export_metadata"}}
+[warn] !  firestore: Cloud Firestore Emulator does not support multiple databases yet. {"metadata":{"emulator":{"name":"firestore"},"message":"Cloud Firestore Emulator does not support multiple databases yet."}}
+[warn] !  firestore: Did not find a Cloud Firestore rules file specified in a firebase.json config file. {"metadata":{"emulator":{"name":"firestore"},"message":"Did not find a Cloud Firestore rules file specified in a firebase.json config file."}}
+[warn] !  firestore: The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration. {"metadata":{"emulator":{"name":"firestore"},"message":"The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration."}}
+[debug] [2025-08-21T07:23:47.908Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2025-08-21T07:23:47.908Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
+[debug] [2025-08-21T07:23:47.908Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","C:\\Users\\szamb\\.cache\\firebase\\emulators\\cloud-firestore-emulator-v1.19.8.jar","--host","127.0.0.1","--port",8181,"--websocket_port",9150,"--project_id","dreampos-94155","--seed_from_export","C:\\Users\\szamb\\pos-system\\firestore-data\\firestore_export\\firestore_export.overall_export_metadata","--single_project_mode",true,"--functions_emulator","127.0.0.1:5101"],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false,"shell":false,"port":8181} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"C:\\\\Users\\\\szamb\\\\.cache\\\\firebase\\\\emulators\\\\cloud-firestore-emulator-v1.19.8.jar\",\"--host\",\"127.0.0.1\",\"--port\",8181,\"--websocket_port\",9150,\"--project_id\",\"dreampos-94155\",\"--seed_from_export\",\"C:\\\\Users\\\\szamb\\\\pos-system\\\\firestore-data\\\\firestore_export\\\\firestore_export.overall_export_metadata\",\"--single_project_mode\",true,\"--functions_emulator\",\"127.0.0.1:5101\"],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false,\"shell\":false,\"port\":8181}"}}
+[info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to \u001b[1mfirestore-debug.log\u001b[22m"}}
+[debug] [2025-08-21T07:23:51.598Z] Aug 21, 2025 9:23:51 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start
+INFO: Started WebSocket server on ws://127.0.0.1:9150
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 21, 2025 9:23:51 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start\r\nINFO: Started WebSocket server on ws://127.0.0.1:9150\r\n"}}
+[debug] [2025-08-21T07:23:51.703Z] API endpoint: http:// {"metadata":{"emulator":{"name":"firestore"},"message":"API endpoint: http://"}}
+[debug] [2025-08-21T07:23:51.704Z] 127.0.0.1:8181
+If you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:
+
+   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8181
+
+If you are running a Firestore in Datastore Mode project, run:
+
+   export DATASTORE_EMULATOR_HOST=127.0.0.1:8181
+
+Note: Support for Datastore Mode is in preview. If you encounter any bugs please file at https://github.com/firebase/firebase-tools/issues.
+Dev App Server is now running.
+
+ {"metadata":{"emulator":{"name":"firestore"},"message":"127.0.0.1:8181\nIf you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:\r\n\n   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8181\n\nIf you are running a Firestore in Datastore Mode project, run:\r\n\n   export DATASTORE_EMULATOR_HOST=127.0.0.1:8181\n\nNote: Support for Datastore Mode is in preview. If you encounter any bugs please file at https://github.com/firebase/firebase-tools/issues.\r\nDev App Server is now running.\n\r\n"}}
+[info] +  firestore: Firestore Emulator UI websocket is running on 9150. {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator UI websocket is running on 9150."}}
+[debug] [2025-08-21T07:24:07.491Z] Checked if tokens are valid: true, expires at: 1755764626392
+[debug] [2025-08-21T07:24:07.491Z] Checked if tokens are valid: true, expires at: 1755764626392
+[debug] [2025-08-21T07:24:07.491Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/dreampos-94155/sites 
+[debug] [2025-08-21T07:24:07.550Z] Aug 21, 2025 9:24:07 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 21, 2025 9:24:07 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\r\nINFO: Connected to new websocket client\r\n"}}
+[debug] [2025-08-21T07:24:08.555Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/dreampos-94155/sites 200
+[debug] [2025-08-21T07:24:08.556Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/dreampos-94155/sites {"sites":[{"name":"projects/dreampos-94155/sites/dreampos-94155","defaultUrl":"https://dreampos-94155.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2025-08-21T07:24:08.556Z] Checked if tokens are valid: true, expires at: 1755764626392
+[debug] [2025-08-21T07:24:08.556Z] Checked if tokens are valid: true, expires at: 1755764626392
+[debug] [2025-08-21T07:24:08.557Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/dreampos-94155/webApps/-/config [none]
+[debug] [2025-08-21T07:24:09.346Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/dreampos-94155/webApps/-/config 200
+[debug] [2025-08-21T07:24:09.346Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/dreampos-94155/webApps/-/config {"projectId":"dreampos-94155","appId":"1:9643074965:web:55089187018ab68b8c029c","storageBucket":"dreampos-94155.firebasestorage.app","apiKey":"AIzaSyBU1Q4Q9Kg31V9XLfWpEBMYgkVLh2GB0W0","authDomain":"dreampos-94155.firebaseapp.com","messagingSenderId":"9643074965","measurementId":"G-M8K8GYF2YZ"}
+[debug] [2025-08-21T07:24:09.355Z] Checked if tokens are valid: true, expires at: 1755764626392
+[debug] [2025-08-21T07:24:09.356Z] Checked if tokens are valid: true, expires at: 1755764626392
+[debug] [2025-08-21T07:24:09.357Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/dreampos-94155 [none]
+[debug] [2025-08-21T07:24:09.588Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/dreampos-94155 200
+[debug] [2025-08-21T07:24:09.589Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/dreampos-94155 {"projectId":"dreampos-94155","projectNumber":"9643074965","displayName":"DREAMPOS","name":"projects/dreampos-94155","resources":{"hostingSite":"dreampos-94155"},"state":"ACTIVE","etag":"1_5fd45011-dbb4-4a77-9c7b-e366588f113a"}
+[info] i  hosting[dreampos-94155]: Serving hosting files from: frontend/build {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mfrontend/build\u001b[22m"}}
+[info] +  hosting[dreampos-94155]: Local server: http://127.0.0.1:5100 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://127.0.0.1:5100\u001b[22m\u001b[24m"}}
+[info] i  functions: Watching "C:\Users\szamb\pos-system\backend\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\Users\\szamb\\pos-system\\backend\\functions\" for Cloud Functions..."}}
+[debug] [2025-08-21T07:24:09.662Z] Validating nodejs source
+[debug] [2025-08-21T07:24:12.690Z] > [functions] package.json contents: {
+  "name": "pos-backend",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc",
+    "serve": "firebase emulators:start --only functions,firestore",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log",
+    "create-admin": "cross-env GCLOUD_PROJECT=dreampos-94155 FIRESTORE_EMULATOR_HOST=127.0.0.1:8180 ts-node src/scripts/createAdmin.ts",
+    "read-admin": "cross-env GCLOUD_PROJECT=poszambo FIRESTORE_EMULATOR_HOST=127.0.0.1:8180 ts-node src/scripts/readAdmin.ts"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "firebase-admin": "^12.1.0",
+    "firebase-functions": "^6.4.0",
+    "joi": "^17.13.1",
+    "jsonwebtoken": "^9.0.2",
+    "pos-system-root": "file:../.."
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.6",
+    "cross-env": "^10.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}
+[debug] [2025-08-21T07:24:12.690Z] Building nodejs source
+[debug] [2025-08-21T07:24:12.691Z] Failed to find version of module node: reached end of search path C:\Users\szamb\pos-system\backend\functions\node_modules
+[info] +  functions: Using node@22 from host. 
+[debug] [2025-08-21T07:24:12.696Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-08-21T07:24:12.715Z] Found firebase-functions binary at 'C:\Users\szamb\pos-system\backend\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8824
+
+[debug] [2025-08-21T07:24:15.009Z] Got response from /__/functions.yaml {"endpoints":{"api":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] +  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[info] +  functions[us-central1-api]: http function initialized (http://127.0.0.1:5101/dreampos-94155/us-central1/api). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5101/dreampos-94155/us-central1/api)."}}
+[debug] [2025-08-21T07:24:19.108Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: . If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4102/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌────────────────┬────────────────┬─────────────────────────────────┐
+│ Emulator       │ Host:Port      │ View in Emulator UI             │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Authentication │ 127.0.0.1:9199 │ http://127.0.0.1:4102/auth      │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Functions      │ 127.0.0.1:5101 │ http://127.0.0.1:4102/functions │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Firestore      │ 127.0.0.1:8181 │ http://127.0.0.1:4102/firestore │
+├────────────────┼────────────────┼─────────────────────────────────┤
+│ Hosting        │ 127.0.0.1:5100 │ n/a                             │
+└────────────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub host: 127.0.0.1 port: 4400
+  Other reserved ports: 4500, 9150
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2025-08-21T07:24:33.510Z] Aug 21, 2025 9:24:33 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 21, 2025 9:24:33 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
+[debug] [2025-08-21T07:24:37.101Z] Aug 21, 2025 9:24:37 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 21, 2025 9:24:37 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
+[debug] [2025-08-21T07:25:37.495Z] Aug 21, 2025 9:25:37 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 21, 2025 9:25:37 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
+[debug] [2025-08-21T07:26:37.582Z] Aug 21, 2025 9:26:37 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 21, 2025 9:26:37 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
+[debug] [2025-08-21T07:27:23.878Z] Aug 21, 2025 9:27:23 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 21, 2025 9:27:23 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
+[debug] [2025-08-21T07:28:23.943Z] Aug 21, 2025 9:28:23 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 21, 2025 9:28:23 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
+[debug] [2025-08-21T07:28:27.147Z] Aug 21, 2025 9:28:27 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 21, 2025 9:28:27 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\r\nINFO: Websocket client disconnected\r\n"}}
+[debug] [2025-08-21T07:28:43.631Z] Aug 21, 2025 9:28:43 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 21, 2025 9:28:43 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
+[debug] [2025-08-21T07:29:07.549Z] Aug 21, 2025 9:29:07 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 21, 2025 9:29:07 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\r\nINFO: Connected to new websocket client\r\n"}}
+[debug] [2025-08-21T07:29:43.693Z] Aug 21, 2025 9:29:43 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 21, 2025 9:29:43 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
+[debug] [2025-08-21T07:30:44.130Z] Aug 21, 2025 9:30:44 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 21, 2025 9:30:44 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
+[debug] [2025-08-21T07:31:44.192Z] Aug 21, 2025 9:31:44 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 21, 2025 9:31:44 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
+[debug] [2025-08-21T07:32:44.561Z] Aug 21, 2025 9:32:44 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 21, 2025 9:32:44 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
+[debug] [2025-08-21T07:33:44.620Z] Aug 21, 2025 9:33:44 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 21, 2025 9:33:44 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
+[debug] [2025-08-21T07:34:44.975Z] Aug 21, 2025 9:34:44 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 21, 2025 9:34:44 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
+[debug] [2025-08-21T07:35:45.019Z] Aug 21, 2025 9:35:45 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 21, 2025 9:35:45 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
+[debug] [2025-08-21T07:36:45.379Z] Aug 21, 2025 9:36:45 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 21, 2025 9:36:45 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
+[debug] [2025-08-21T07:37:30.566Z] Aug 21, 2025 9:37:30 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 21, 2025 9:37:30 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
+[debug] [2025-08-21T07:37:30.922Z] Aug 21, 2025 9:37:30 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 21, 2025 9:37:30 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
+[debug] [2025-08-21T07:37:30.923Z] Aug 21, 2025 9:37:30 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 21, 2025 9:37:30 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
+[debug] [2025-08-21T07:37:33.370Z] Aug 21, 2025 9:37:33 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 21, 2025 9:37:33 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
+[debug] [2025-08-21T07:37:33.748Z] Aug 21, 2025 9:37:33 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 21, 2025 9:37:33 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
+[debug] [2025-08-21T07:37:38.760Z] Aug 21, 2025 9:37:38 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 21, 2025 9:37:38 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
+[debug] [2025-08-21T07:37:39.088Z] Aug 21, 2025 9:37:39 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 21, 2025 9:37:39 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
+[info] [hosting] Rewriting /api/stores to http://127.0.0.1:5101/dreampos-94155/us-central1/api for local Function us-central1/api
+[debug] [2025-08-21T07:37:42.086Z] >>> [apiv2][query] GET http://127.0.0.1:5101/dreampos-94155/us-central1/api/api/stores 
+[debug] [2025-08-21T07:37:42.099Z] [work-queue] {"queuedWork":["/dreampos-94155/us-central1/api/api/stores-2025-08-21T07:37:42.098Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-08-21T07:37:42.100Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/dreampos-94155/us-central1/api/api/stores-2025-08-21T07:37:42.098Z"],"workRunningCount":1}
+[debug] [2025-08-21T07:37:42.101Z] Accepted request GET /dreampos-94155/us-central1/api/api/stores --> us-central1-api
+[debug] [2025-08-21T07:37:42.108Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2025-08-21T07:37:42.109Z] [functions] Got req.url=/dreampos-94155/us-central1/api/api/stores, mapping to path=/api/stores {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/dreampos-94155/us-central1/api/api/stores, mapping to path=/api/stores"}}
+[debug] [2025-08-21T07:37:42.159Z] [worker-pool] addWorker(us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-api)"}}
+[debug] [2025-08-21T07:37:42.160Z] [worker-pool] Adding worker with key us-central1-api, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-api, total=1"}}
+[debug] [2025-08-21T07:37:44.993Z] [runtime-status] [24688] Resolved module firebase-admin {"declared":true,"installed":true,"version":"12.7.0","resolution":"C:\\Users\\szamb\\pos-system\\backend\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [24688] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"12.7.0\",\"resolution\":\"C:\\\\Users\\\\szamb\\\\pos-system\\\\backend\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2025-08-21T07:37:44.995Z] [runtime-status] [24688] Resolved module firebase-functions {"declared":true,"installed":true,"version":"6.4.0","resolution":"C:\\Users\\szamb\\pos-system\\backend\\functions\\node_modules\\firebase-functions\\lib\\v2\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [24688] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"6.4.0\",\"resolution\":\"C:\\\\Users\\\\szamb\\\\pos-system\\\\backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v2\\\\index.js\"}"}}
+[debug] [2025-08-21T07:37:44.995Z] [runtime-status] [24688] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [24688] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2025-08-21T07:37:44.998Z] [runtime-status] [24688] Resolved module firebase-functions {"declared":true,"installed":true,"version":"6.4.0","resolution":"C:\\Users\\szamb\\pos-system\\backend\\functions\\node_modules\\firebase-functions\\lib\\v2\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [24688] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"6.4.0\",\"resolution\":\"C:\\\\Users\\\\szamb\\\\pos-system\\\\backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v2\\\\index.js\"}"}}
+[debug] [2025-08-21T07:37:45.855Z] [runtime-status] [24688] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [24688] Checked functions.config() {\"config\":{}}"}}
+[debug] [2025-08-21T07:37:45.855Z] [runtime-status] [24688] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"6.4.0","resolution":"C:\\Users\\szamb\\pos-system\\backend\\functions\\node_modules\\firebase-functions\\lib\\v2\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [24688] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"6.4.0\",\"resolution\":\"C:\\\\Users\\\\szamb\\\\pos-system\\\\backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v2\\\\index.js\"}}"}}
+[debug] [2025-08-21T07:37:45.857Z] [runtime-status] [24688] Resolved module firebase-functions {"declared":true,"installed":true,"version":"6.4.0","resolution":"C:\\Users\\szamb\\pos-system\\backend\\functions\\node_modules\\firebase-functions\\lib\\v2\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [24688] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"6.4.0\",\"resolution\":\"C:\\\\Users\\\\szamb\\\\pos-system\\\\backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v2\\\\index.js\"}"}}
+[debug] [2025-08-21T07:37:45.870Z] [runtime-status] [24688] Resolved module firebase-admin {"declared":true,"installed":true,"version":"12.7.0","resolution":"C:\\Users\\szamb\\pos-system\\backend\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [24688] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"12.7.0\",\"resolution\":\"C:\\\\Users\\\\szamb\\\\pos-system\\\\backend\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2025-08-21T07:37:45.877Z] [runtime-status] [24688] Resolved module firebase-functions {"declared":true,"installed":true,"version":"6.4.0","resolution":"C:\\Users\\szamb\\pos-system\\backend\\functions\\node_modules\\firebase-functions\\lib\\v2\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [24688] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"6.4.0\",\"resolution\":\"C:\\\\Users\\\\szamb\\\\pos-system\\\\backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v2\\\\index.js\"}"}}
+[debug] [2025-08-21T07:37:45.878Z] [runtime-status] [24688] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"12.7.0","resolution":"C:\\Users\\szamb\\pos-system\\backend\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [24688] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"12.7.0\",\"resolution\":\"C:\\\\Users\\\\szamb\\\\pos-system\\\\backend\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
+[debug] [2025-08-21T07:37:46.301Z] [runtime-status] [24688] initializeApp(DEFAULT) {"storageBucket":"dreampos-94155.firebasestorage.app","projectId":"dreampos-94155"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [24688] initializeApp(DEFAULT) {\"storageBucket\":\"dreampos-94155.firebasestorage.app\",\"projectId\":\"dreampos-94155\"}"}}
+[debug] [2025-08-21T07:37:46.478Z] [runtime-status] [24688] Functions runtime initialized. {"cwd":"C:\\Users\\szamb\\pos-system\\backend\\functions","node_version":"22.17.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [24688] Functions runtime initialized. {\"cwd\":\"C:\\\\Users\\\\szamb\\\\pos-system\\\\backend\\\\functions\",\"node_version\":\"22.17.0\"}"}}
+[debug] [2025-08-21T07:37:46.479Z] [runtime-status] [24688] Listening to port: \\?\pipe\fire_emu_e41f818d2c435c82 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [24688] Listening to port: \\\\?\\pipe\\fire_emu_e41f818d2c435c82"}}
+[debug] [2025-08-21T07:37:46.515Z] [worker-us-central1-api-50ba0e8b-8d9c-457b-9b15-241c6774c28a]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-50ba0e8b-8d9c-457b-9b15-241c6774c28a]: IDLE"}}
+[debug] [2025-08-21T07:37:46.516Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2025-08-21T07:37:46.518Z] [worker-us-central1-api-50ba0e8b-8d9c-457b-9b15-241c6774c28a]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-50ba0e8b-8d9c-457b-9b15-241c6774c28a]: BUSY"}}
+[debug] [2025-08-21T07:37:47.762Z] Aug 21, 2025 9:37:47 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 21, 2025 9:37:47 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected HTTP/2 connection.\r\n"}}
+[debug] [2025-08-21T07:37:48.135Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 1617.7213000000002ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 1617.7213000000002ms"}}
+[debug] [2025-08-21T07:37:48.136Z] [worker-us-central1-api-50ba0e8b-8d9c-457b-9b15-241c6774c28a]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-50ba0e8b-8d9c-457b-9b15-241c6774c28a]: IDLE"}}
+[debug] [2025-08-21T07:37:48.137Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2025-08-21T07:37:48.137Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2025-08-21T07:37:48.138Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2025-08-21T07:37:48.140Z] <<< [apiv2][status] GET http://127.0.0.1:5101/dreampos-94155/us-central1/api/api/stores 200
+[debug] [2025-08-21T07:37:48.141Z] <<< [apiv2][body] GET http://127.0.0.1:5101/dreampos-94155/us-central1/api/api/stores [stream]
+[info] i  hosting: 127.0.0.1 - - [21/Aug/2025:07:37:48 +0000] "GET /api/stores HTTP/1.1" 200 2 "http://localhost:3000/stores" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [21/Aug/2025:07:37:48 +0000] \"GET /api/stores HTTP/1.1\" 200 2 \"http://localhost:3000/stores\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0\""}}
+[info] [hosting] Rewriting /api/stores to http://127.0.0.1:5101/dreampos-94155/us-central1/api for local Function us-central1/api
+[debug] [2025-08-21T07:37:48.166Z] >>> [apiv2][query] GET http://127.0.0.1:5101/dreampos-94155/us-central1/api/api/stores 
+[debug] [2025-08-21T07:37:48.172Z] [work-queue] {"queuedWork":["/dreampos-94155/us-central1/api/api/stores-2025-08-21T07:37:48.171Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-08-21T07:37:48.172Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/dreampos-94155/us-central1/api/api/stores-2025-08-21T07:37:48.171Z"],"workRunningCount":1}
+[debug] [2025-08-21T07:37:48.172Z] Accepted request GET /dreampos-94155/us-central1/api/api/stores --> us-central1-api
+[debug] [2025-08-21T07:37:48.180Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2025-08-21T07:37:48.181Z] [functions] Got req.url=/dreampos-94155/us-central1/api/api/stores, mapping to path=/api/stores {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/dreampos-94155/us-central1/api/api/stores, mapping to path=/api/stores"}}
+[debug] [2025-08-21T07:37:48.181Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2025-08-21T07:37:48.182Z] [worker-us-central1-api-50ba0e8b-8d9c-457b-9b15-241c6774c28a]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-50ba0e8b-8d9c-457b-9b15-241c6774c28a]: BUSY"}}
+[debug] [2025-08-21T07:37:48.207Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 24.8363ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 24.8363ms"}}
+[debug] [2025-08-21T07:37:48.208Z] [worker-us-central1-api-50ba0e8b-8d9c-457b-9b15-241c6774c28a]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-50ba0e8b-8d9c-457b-9b15-241c6774c28a]: IDLE"}}
+[debug] [2025-08-21T07:37:48.208Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2025-08-21T07:37:48.209Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2025-08-21T07:37:48.209Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2025-08-21T07:37:48.211Z] <<< [apiv2][status] GET http://127.0.0.1:5101/dreampos-94155/us-central1/api/api/stores 200
+[debug] [2025-08-21T07:37:48.211Z] <<< [apiv2][body] GET http://127.0.0.1:5101/dreampos-94155/us-central1/api/api/stores [stream]
+[info] i  hosting: 127.0.0.1 - - [21/Aug/2025:07:37:48 +0000] "GET /api/stores HTTP/1.1" 200 2 "http://localhost:3000/stores" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [21/Aug/2025:07:37:48 +0000] \"GET /api/stores HTTP/1.1\" 200 2 \"http://localhost:3000/stores\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0\""}}
+[info] [hosting] Rewriting /api/stores to http://127.0.0.1:5101/dreampos-94155/us-central1/api for local Function us-central1/api
+[debug] [2025-08-21T07:37:54.581Z] >>> [apiv2][query] GET http://127.0.0.1:5101/dreampos-94155/us-central1/api/api/stores 
+[debug] [2025-08-21T07:37:54.588Z] [work-queue] {"queuedWork":["/dreampos-94155/us-central1/api/api/stores-2025-08-21T07:37:54.588Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-08-21T07:37:54.589Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/dreampos-94155/us-central1/api/api/stores-2025-08-21T07:37:54.588Z"],"workRunningCount":1}
+[debug] [2025-08-21T07:37:54.589Z] Accepted request GET /dreampos-94155/us-central1/api/api/stores --> us-central1-api
+[debug] [2025-08-21T07:37:54.595Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2025-08-21T07:37:54.595Z] [functions] Got req.url=/dreampos-94155/us-central1/api/api/stores, mapping to path=/api/stores {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/dreampos-94155/us-central1/api/api/stores, mapping to path=/api/stores"}}
+[debug] [2025-08-21T07:37:54.596Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2025-08-21T07:37:54.597Z] [worker-us-central1-api-50ba0e8b-8d9c-457b-9b15-241c6774c28a]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-50ba0e8b-8d9c-457b-9b15-241c6774c28a]: BUSY"}}
+[debug] [2025-08-21T07:37:54.634Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 37.5263ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 37.5263ms"}}
+[debug] [2025-08-21T07:37:54.635Z] [worker-us-central1-api-50ba0e8b-8d9c-457b-9b15-241c6774c28a]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-50ba0e8b-8d9c-457b-9b15-241c6774c28a]: IDLE"}}
+[debug] [2025-08-21T07:37:54.635Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2025-08-21T07:37:54.635Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2025-08-21T07:37:54.636Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2025-08-21T07:37:54.637Z] <<< [apiv2][status] GET http://127.0.0.1:5101/dreampos-94155/us-central1/api/api/stores 200
+[debug] [2025-08-21T07:37:54.638Z] <<< [apiv2][body] GET http://127.0.0.1:5101/dreampos-94155/us-central1/api/api/stores [stream]
+[info] i  hosting: 127.0.0.1 - - [21/Aug/2025:07:37:54 +0000] "GET /api/stores HTTP/1.1" 200 2 "http://localhost:3000/stores" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [21/Aug/2025:07:37:54 +0000] \"GET /api/stores HTTP/1.1\" 200 2 \"http://localhost:3000/stores\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0\""}}
+[info] [hosting] Rewriting /api/stores to http://127.0.0.1:5101/dreampos-94155/us-central1/api for local Function us-central1/api
+[debug] [2025-08-21T07:37:54.836Z] >>> [apiv2][query] GET http://127.0.0.1:5101/dreampos-94155/us-central1/api/api/stores 
+[debug] [2025-08-21T07:37:54.841Z] [work-queue] {"queuedWork":["/dreampos-94155/us-central1/api/api/stores-2025-08-21T07:37:54.841Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-08-21T07:37:54.841Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/dreampos-94155/us-central1/api/api/stores-2025-08-21T07:37:54.841Z"],"workRunningCount":1}
+[debug] [2025-08-21T07:37:54.842Z] Accepted request GET /dreampos-94155/us-central1/api/api/stores --> us-central1-api
+[debug] [2025-08-21T07:37:54.846Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2025-08-21T07:37:54.846Z] [functions] Got req.url=/dreampos-94155/us-central1/api/api/stores, mapping to path=/api/stores {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/dreampos-94155/us-central1/api/api/stores, mapping to path=/api/stores"}}
+[debug] [2025-08-21T07:37:54.846Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2025-08-21T07:37:54.847Z] [worker-us-central1-api-50ba0e8b-8d9c-457b-9b15-241c6774c28a]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-50ba0e8b-8d9c-457b-9b15-241c6774c28a]: BUSY"}}
+[debug] [2025-08-21T07:37:54.871Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 24.5549ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 24.5549ms"}}
+[debug] [2025-08-21T07:37:54.873Z] [worker-us-central1-api-50ba0e8b-8d9c-457b-9b15-241c6774c28a]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-50ba0e8b-8d9c-457b-9b15-241c6774c28a]: IDLE"}}
+[debug] [2025-08-21T07:37:54.873Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2025-08-21T07:37:54.873Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2025-08-21T07:37:54.873Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2025-08-21T07:37:54.875Z] <<< [apiv2][status] GET http://127.0.0.1:5101/dreampos-94155/us-central1/api/api/stores 200
+[debug] [2025-08-21T07:37:54.875Z] <<< [apiv2][body] GET http://127.0.0.1:5101/dreampos-94155/us-central1/api/api/stores [stream]
+[info] i  hosting: 127.0.0.1 - - [21/Aug/2025:07:37:54 +0000] "GET /api/stores HTTP/1.1" 200 2 "http://localhost:3000/stores" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [21/Aug/2025:07:37:54 +0000] \"GET /api/stores HTTP/1.1\" 200 2 \"http://localhost:3000/stores\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0\""}}
+[debug] [2025-08-21T07:38:38.765Z] Aug 21, 2025 9:38:38 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 21, 2025 9:38:38 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
+[debug] [2025-08-21T07:38:38.775Z] Aug 21, 2025 9:38:38 AM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose
+INFO: channel closed
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 21, 2025 9:38:38 AM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose\r\nINFO: channel closed\r\n"}}
+[debug] [2025-08-21T07:45:27.155Z] Aug 21, 2025 9:45:27 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 21, 2025 9:45:27 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\r\nINFO: Websocket client disconnected\r\n"}}
+[debug] [2025-08-21T07:53:36.259Z] Aug 21, 2025 9:53:36 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 21, 2025 9:53:36 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\r\nINFO: Connected to new websocket client\r\n"}}
+[info] i  hosting: 127.0.0.1 - - [21/Aug/2025:08:14:24 +0000] "GET /assets/jewelry/jewelry2.jpg HTTP/1.1" 200 644 "http://localhost:3000/sales" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [21/Aug/2025:08:14:24 +0000] \"GET /assets/jewelry/jewelry2.jpg HTTP/1.1\" 200 644 \"http://localhost:3000/sales\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0\""}}
+[info] i  hosting: 127.0.0.1 - - [21/Aug/2025:08:14:24 +0000] "GET /assets/watches/watch3.jpg HTTP/1.1" 200 644 "http://localhost:3000/sales" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [21/Aug/2025:08:14:24 +0000] \"GET /assets/watches/watch3.jpg HTTP/1.1\" 200 644 \"http://localhost:3000/sales\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0\""}}
+[info] i  hosting: 127.0.0.1 - - [21/Aug/2025:08:14:24 +0000] "GET /assets/jewelry/jewelry1.jpg HTTP/1.1" 200 644 "http://localhost:3000/sales" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [21/Aug/2025:08:14:24 +0000] \"GET /assets/jewelry/jewelry1.jpg HTTP/1.1\" 200 644 \"http://localhost:3000/sales\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0\""}}
+[info] i  hosting: 127.0.0.1 - - [21/Aug/2025:08:14:24 +0000] "GET /assets/watches/watch2.jpg HTTP/1.1" 200 644 "http://localhost:3000/sales" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [21/Aug/2025:08:14:24 +0000] \"GET /assets/watches/watch2.jpg HTTP/1.1\" 200 644 \"http://localhost:3000/sales\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0\""}}
+[info] i  hosting: 127.0.0.1 - - [21/Aug/2025:08:14:24 +0000] "GET /assets/perfumes/perfume1.jpg HTTP/1.1" 200 644 "http://localhost:3000/sales" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [21/Aug/2025:08:14:24 +0000] \"GET /assets/perfumes/perfume1.jpg HTTP/1.1\" 200 644 \"http://localhost:3000/sales\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0\""}}
+[info] i  hosting: 127.0.0.1 - - [21/Aug/2025:08:14:24 +0000] "GET /assets/watches/watch1.jpg HTTP/1.1" 200 644 "http://localhost:3000/sales" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [21/Aug/2025:08:14:24 +0000] \"GET /assets/watches/watch1.jpg HTTP/1.1\" 200 644 \"http://localhost:3000/sales\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0\""}}
+[info] i  hosting: 127.0.0.1 - - [21/Aug/2025:08:14:24 +0000] "GET /assets/perfumes/perfume2.jpg HTTP/1.1" 200 644 "http://localhost:3000/sales" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [21/Aug/2025:08:14:24 +0000] \"GET /assets/perfumes/perfume2.jpg HTTP/1.1\" 200 644 \"http://localhost:3000/sales\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0\""}}
+[info] i  hosting: 127.0.0.1 - - [21/Aug/2025:08:14:24 +0000] "GET /assets/watches/watch4.jpg HTTP/1.1" 200 644 "http://localhost:3000/sales" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [21/Aug/2025:08:14:24 +0000] \"GET /assets/watches/watch4.jpg HTTP/1.1\" 200 644 \"http://localhost:3000/sales\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0\""}}
+[info] [hosting] Rewriting /api/stores to http://127.0.0.1:5101/dreampos-94155/us-central1/api for local Function us-central1/api
+[debug] [2025-08-21T08:15:27.888Z] >>> [apiv2][query] GET http://127.0.0.1:5101/dreampos-94155/us-central1/api/api/stores 
+[debug] [2025-08-21T08:15:27.895Z] [work-queue] {"queuedWork":["/dreampos-94155/us-central1/api/api/stores-2025-08-21T08:15:27.895Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-08-21T08:15:27.896Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/dreampos-94155/us-central1/api/api/stores-2025-08-21T08:15:27.895Z"],"workRunningCount":1}
+[debug] [2025-08-21T08:15:27.896Z] Accepted request GET /dreampos-94155/us-central1/api/api/stores --> us-central1-api
+[debug] [2025-08-21T08:15:27.903Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2025-08-21T08:15:27.903Z] [functions] Got req.url=/dreampos-94155/us-central1/api/api/stores, mapping to path=/api/stores {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/dreampos-94155/us-central1/api/api/stores, mapping to path=/api/stores"}}
+[debug] [2025-08-21T08:15:27.904Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2025-08-21T08:15:27.905Z] [worker-us-central1-api-50ba0e8b-8d9c-457b-9b15-241c6774c28a]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-50ba0e8b-8d9c-457b-9b15-241c6774c28a]: BUSY"}}
+[debug] [2025-08-21T08:15:27.933Z] Aug 21, 2025 10:15:27 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 21, 2025 10:15:27 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected HTTP/2 connection.\r\n"}}
+[debug] [2025-08-21T08:15:27.967Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 62.9813ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 62.9813ms"}}
+[debug] [2025-08-21T08:15:27.969Z] [worker-us-central1-api-50ba0e8b-8d9c-457b-9b15-241c6774c28a]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-50ba0e8b-8d9c-457b-9b15-241c6774c28a]: IDLE"}}
+[debug] [2025-08-21T08:15:27.969Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2025-08-21T08:15:27.970Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2025-08-21T08:15:27.970Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2025-08-21T08:15:27.972Z] <<< [apiv2][status] GET http://127.0.0.1:5101/dreampos-94155/us-central1/api/api/stores 200
+[debug] [2025-08-21T08:15:27.973Z] <<< [apiv2][body] GET http://127.0.0.1:5101/dreampos-94155/us-central1/api/api/stores [stream]
+[info] i  hosting: 127.0.0.1 - - [21/Aug/2025:08:15:27 +0000] "GET /api/stores HTTP/1.1" 200 2 "http://localhost:3000/stores" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [21/Aug/2025:08:15:27 +0000] \"GET /api/stores HTTP/1.1\" 200 2 \"http://localhost:3000/stores\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0\""}}
+[info] [hosting] Rewriting /api/stores to http://127.0.0.1:5101/dreampos-94155/us-central1/api for local Function us-central1/api
+[debug] [2025-08-21T08:15:28.147Z] >>> [apiv2][query] GET http://127.0.0.1:5101/dreampos-94155/us-central1/api/api/stores 
+[debug] [2025-08-21T08:15:28.151Z] [work-queue] {"queuedWork":["/dreampos-94155/us-central1/api/api/stores-2025-08-21T08:15:28.151Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-08-21T08:15:28.151Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/dreampos-94155/us-central1/api/api/stores-2025-08-21T08:15:28.151Z"],"workRunningCount":1}
+[debug] [2025-08-21T08:15:28.151Z] Accepted request GET /dreampos-94155/us-central1/api/api/stores --> us-central1-api
+[debug] [2025-08-21T08:15:28.158Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2025-08-21T08:15:28.159Z] [functions] Got req.url=/dreampos-94155/us-central1/api/api/stores, mapping to path=/api/stores {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/dreampos-94155/us-central1/api/api/stores, mapping to path=/api/stores"}}
+[debug] [2025-08-21T08:15:28.159Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2025-08-21T08:15:28.160Z] [worker-us-central1-api-50ba0e8b-8d9c-457b-9b15-241c6774c28a]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-50ba0e8b-8d9c-457b-9b15-241c6774c28a]: BUSY"}}
+[debug] [2025-08-21T08:15:28.209Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 50.0197ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 50.0197ms"}}
+[debug] [2025-08-21T08:15:28.214Z] [worker-us-central1-api-50ba0e8b-8d9c-457b-9b15-241c6774c28a]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-50ba0e8b-8d9c-457b-9b15-241c6774c28a]: IDLE"}}
+[debug] [2025-08-21T08:15:28.214Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2025-08-21T08:15:28.215Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2025-08-21T08:15:28.215Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2025-08-21T08:15:28.217Z] <<< [apiv2][status] GET http://127.0.0.1:5101/dreampos-94155/us-central1/api/api/stores 200
+[debug] [2025-08-21T08:15:28.218Z] <<< [apiv2][body] GET http://127.0.0.1:5101/dreampos-94155/us-central1/api/api/stores [stream]
+[info] i  hosting: 127.0.0.1 - - [21/Aug/2025:08:15:28 +0000] "GET /api/stores HTTP/1.1" 200 2 "http://localhost:3000/stores" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [21/Aug/2025:08:15:28 +0000] \"GET /api/stores HTTP/1.1\" 200 2 \"http://localhost:3000/stores\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0\""}}

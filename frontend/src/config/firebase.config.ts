@@ -19,7 +19,7 @@ const db = getFirestore(app);
 // Se connecte à l'émulateur Firestore en développement
 if (process.env.NODE_ENV === 'development') {
   // Assurez-vous que le port correspond à celui configuré dans votre firebase.json
-  connectFirestoreEmulator(db, 'localhost', 8180);
+  connectFirestoreEmulator(db, 'localhost', 8181);
 }
 
 export { db };

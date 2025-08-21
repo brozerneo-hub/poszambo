@@ -6,7 +6,7 @@
   justify-content: center;
   text-align: center;
   border-radius: 1rem; /* rounded-2xl */
-  padding: 1rem; /* Adjusted padding */
+  padding: 1.5rem; /* Increased padding */
   width: 100%; /* Full width */
   background-color: rgba(255, 255, 255, 0.05); /* bg-white/5 */
   border: 1px solid rgba(255, 255, 255, 0.08); /* border border-white/[.08] */
@@ -40,9 +40,9 @@
 }
 
 .tile-icon {
-  width: 2.1rem; /* w-12 reduced by 30% */
-  height: 2.1rem; /* h-12 reduced by 30% */
-  margin-bottom: 0.75rem; /* mb-3 */
+  width: 3rem; /* w-12 increased */
+  height: 3rem; /* h-12 increased */
+  margin-bottom: 1rem; /* mb-4 */
   color: #C2A46D; /* text-gold */
   transition: transform 200ms ease-in-out; /* transition-transform */
 }
@@ -53,11 +53,11 @@
 
 .tile-title {
   font-family: serif; /* font-serif */
-  font-size: 1.125rem; /* Reverted to original */
+  font-size: 1.5rem; /* Increased from 1.125rem */
   color: #F5F3EF; /* text-text */
 }
 
 .tile-subtitle {
-  font-size: 0.875rem; /* Reverted to original */
+  font-size: 1rem; /* Increased from 0.875rem */
   color: rgba(245, 243, 239, 0.6); /* text-text/60 */
 }

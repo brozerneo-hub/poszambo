@@ -1,194 +1,79 @@
-# DREAMPOS Project Status
+### 2025-08-21 - Stabilisation de l'environnement local & refonte de l'UI Magasins
 
-## Project Health Dashboard
-- **Progress**: 85% Frontend | 60% Backend | 90% UI/UX
-- **Last Build**: ✔ Success (2025-08-18 07:28)
-- **Test Coverage**: 78%
-- **Known Issues**: 1 Critical, 3 Minor
-- **Next Milestone**: Sales System (Due: Aug 25)
+- **Problèmes résolus:**
+  - Correction des erreurs de compilation et d'importation de modules entre les paquets `backend` et `backend/functions`.
+  - Fiabilisation du chemin d'import dans `stores.controller.ts` pour pointer vers le répertoire `dist` compilé.
+  - Correction du routage Express pour gérer le préfixe `/api`, ce qui a résolu l'erreur 404 sur la page des magasins.
+  - Correction des ports de l'émulateur Firestore (8180 vs 8181) entre la configuration du frontend, les scripts backend et l'émulateur.
+  - Activation de la persistance des données de l'émulateur en ajoutant l'option `--export-on-exit`.
+  - Correction de la configuration de connexion à Firestore dans le frontend pour utiliser le bon port (8181), permettant l'affichage des produits.
 
-## Current Sprint Goals
-- [x] Complete Catalog Tile with real-time Firestore data
-- [x] Implement ProductForm with validation
-- [x] Add inventory alerts system
-- [x] Test full product CRUD operations
-- [x] Fix Firestore emulator connection (Port 8180)
-- [x] Create CatalogTile component
-- [x] Implement Stock Management View
+- **Nouvelles fonctionnalités / Modifications:**
+  - La page "Admin Magasin" (`StoresPage.tsx`) a été transformée en un tableau de bord à deux colonnes, sur le modèle de la page Catalogue.
+  - Ajout d'un bouton "Accueil" pour la navigation.
+  - Création d'un script (`scripts/seed_stores.mjs`) pour ajouter 16 magasins de test à la base de données.
 
-## Completed Tasks
-### 2025-08-18 - Catalog Finalization
-- **Stock Management**: Implemented stock view with search and filtering.
-- **Layout**: Fixed layout issues and implemented a two-column layout for the catalog page.
-- **Navigation**: Added a back to home button and corrected the navigation.
+- **Statut actuel:**
+  - L'environnement de développement local est stable et fonctionnel.
+  - Tous les problèmes connus sont résolus.
+  - La page "Admin Magasin" est maintenant fonctionnelle et affiche les données dans l'émulateur local.
 
-### 2025-08-16 - Catalog Development
-- **CatalogTile Component**: Real-time stock display with badge
-- **useCatalogData Hook**: Firestore integration working
-- **ProductsPage**: Basic CRUD operations implemented
-- **Search Functionality**: Live product filtering
+---
 
-### 2025-08-15 - Firestore Integration
-- **Emulator Setup**: Port 8180 confirmed and working
-- **Test Data**: Categories and products seeded successfully
-- **Connection**: Frontend-Firestore communication established
+### 2025-08-19 - Debugging & Deployment Updates
 
-## Known Issues & Solutions
+- **Frontend Deployment:**
+  - Successfully deployed frontend with updated `firebase.json` rewrite rules.
+  - Public URL: `https://dreampos-94155.web.app`
 
-### Critical Issues
-| Issue | Status | Solution | Assignee |
-|---|---|---|---|
-| Git push conflicts | ✔ Resolved | Use git reflog recovery | Dev |
+- **Deployed Firestore Seeding:**
+  - Successfully seeded deployed Firestore database with product data.
+  - Products now visible on public website.
 
-### Minor Issues
-- [ ] Badge "0" showing on all tiles 🚫 Hide when count = 0
-- [ ] Image upload functionality requires Cloud Storage setup
-- [ ] Need clarification on user role permissions
+- **Current Issues (Admin Magasin / Stores Page):**
+  - **Public Site (`https://dreampos-94155.web.app/stores`):** `Erreur: HTTP error! status: 404`
+    - *Diagnosis:* Frontend request to `/api/stores` results in 404.
+  - **Local (`http://localhost:3000/stores`):** `Erreur: Unexpected token '<', "<!DOCTYPE "... is not valid JSON`
+    - *Diagnosis:* Frontend expects JSON but receives HTML error page from local backend.
+    - *Root Cause:* Firebase Functions emulator port conflicts (4100, 8180) preventing startup.
 
-## Emergency Recovery Commands
+- **Next Steps:**
+  - Resolve Firebase Emulator port conflicts to debug local `api` function.
+  - Investigate public 404 error after local issue is resolved.
 
-# Git recovery (if code lost)
-git reflog
-git reset --hard <commit-hash>
+### Emulator Commands
 
-# Firebase emulator restart
-firebase emulators:start --only firestore --port 8180
+- To start the emulators with the persisted data, run:
+  ```sh
+  npm run emulate
+  ```
 
-# Quick project restart
-npm run dev:full
+---
 
-## Performance Metrics
+### 2025-08-19 (Soir) - Debugging Local Environment
 
-### Build Times
-- **Frontend Build**: ~45s (Target: <30s)
-- **Firebase Deploy**: ~2m (Target: <90s)
-- **Emulator Start**: ~8s ✔
+- **Issue:** After fixing initial issues, running the emulator now results in a 500 Internal Server Error when accessing the "Admin Magasin" page. The root cause was identified as a build process issue.
 
-### User Experience
-- **Page Load**: <2s ✔
-- **Search Response**: <300ms ✔
-- **Navigation**: Instant ✔
+- **Diagnosis:** The `backend` project was not being compiled into JavaScript, meaning the `backend/dist` directory was never created. The Functions emulator was therefore trying to import modules that didn't exist, causing the `Cannot find module` error at runtime.
 
-### Code Quality
-- **TypeScript Errors**: 0 ✔
-- **ESLint Warnings**: 0 ✔
-- **Bundle Size**: 2.1MB (Target: <2MB)
+- **Fixes Applied:**
+  1.  **Corrected Import Path:** The import path in `stores.controller.ts` was updated to correctly point to the future compiled location: `../../../../dist/stores`.
+  2.  **Created Build Scripts:** Added `build` and `start` scripts to the root `package.json` to ensure both `backend` and `backend/functions` are compiled in the correct order before the emulator starts.
 
-## Roadmap
-
-### Phase 1: Catalog Management (Current)
-- [x] Basic product listing
-- [x] Search and filtering
-- [x] Advanced product forms
-- [x] Stock management view
-- [ ] Bulk operations
-- [ ] Category management
-
-### Phase 2: Sales System (Next)
-- [ ] Shopping cart functionality
-- [ ] Payment processing
-- [ ] Receipt generation
-- [ ] Transaction history
-
-### Phase 3: Analytics & Reporting (Future)
-- [ ] Sales dashboard
-- [ ] Inventory reports
-- [ ] Performance analytics
-- [ ] Export capabilities
-
-## Blockers
-- Firebase production config needed for deployment
-
-## Team Notes
-
-### Decisions Made
-- **2025-08-18**: Implemented a two-column layout for the catalog page.
-- **2025-08-16**: Chose Firestore over Supabase for real-time features
-- **2025-08-15**: Implemented glass-morphism design instead of material UI
-- **2025-08-14**: Decided to use emulator for development
-
-### Questions for Next Session
-- [ ] Should we implement offline-first architecture?
-- [ ] Discuss image compression strategy
-
-### External Dependencies
-- **Firebase Project**: dreampos-94155 ✔
-- **GitHub Repo**: brozerneo-hub/poszambo ✔
-- **Domain**: dreampos-94155.web.app ✔
-
-## Testing Status
-
-### Unit Tests
-- **Components**: 18/25 tested (72%)
-- **Hooks**: 6/8 tested (75%)
-- **Services**: 4/6 tested (66%)
-
-### Integration Tests
-- [x] Firebase connection
-- [x] Product CRUD operations
-- [x] Search functionality
-- [x] Form validation
-- [x] Stock management view
-
-### E2E Tests
-- [ ] User authentication flow
-- [ ] Product management workflow
-- [ ] Mobile responsiveness
-
-### Test Commands
-
-```bash
-# Run all tests
-npm test
-
-# Test coverage
-npm run test:coverage
-
-# E2E tests
-npm run test:e2e
-```
-
-## Environment Setup
-
-### Development
-```bash
-# Required Node version
-node --version  # v18.17.0+
-
-# Environment variables
-REACT_APP_FIREBASE_PROJECT_ID=dreampos-94155
-REACT_APP_EMULATOR_HOST=localhost:8180
-REACT_APP_ENV=development
-```
-
-### Production
-```bash
-# Build command
-npm run build
-
-# Deploy command
-firebase deploy --only hosting
-```
-
-### Dependencies Status
-| Package | Version | Status | Notes |
-|---|---|---|---|
-| React | 18.2.0 | ✔ Latest | |
-| Firebase | 10.3.1 | ✔ Latest | |
-| TailwindCSS | 3.3.0 | ✔ Latest | |
-| TypeScript | 5.1.6 | ✔ Latest | |
-
-### 2025-08-19 - Store Management & Disclaimer Integration
-
-- **Frontend - Login Page**: Integrated disclaimer content directly into `LoginPage.tsx` below the login form. Added store selection dropdown.
-- **Frontend - Store Management**:
-  - Created `StoresPage.tsx` for CRUD operations on stores, using a tile-like display.
-  - Updated `DashboardPage.tsx` to navigate to `/stores` from the "Admin Magasin" tile.
-  - Created generic `Modal.tsx` component (`frontend/src/ui/components/Modal.tsx`).
-  - Modified `Button.tsx` (`frontend/src/ui/components/Button.tsx`) to support `secondary` and `danger` variants.
-  - Added `Store` interface to `frontend/src/types/types.ts` for frontend type safety.
-- **Backend - Store Management**:
-  - Defined `Store` interface in `backend/src/types.ts`.
-  - Implemented CRUD functions for stores in `backend/src/stores.ts`.
-  - Added API routes for stores (GET, POST, PUT, DELETE) in `backend/src/index.ts`.
-- **Infrastructure**: Created `firestore.rules` and `firestore.indexes.json` in the project root.
+- **Next Steps to Resolve the Issue:**
+  1.  **Kill Conflicting Processes (si nécessaire):** If the emulator fails to start due to a "port taken" error (e.g., for port 8181), run the following commands in a new terminal:
+      ```sh
+      # Find the process ID (PID)
+      netstat -aon | findstr :8181
+      # Kill the process, replacing <PID> with the number found
+      taskkill /PID <PID> /F
+      ```
+  2.  **Build the Projects:** Run the new build command from the project root:
+      ```sh
+      npm run build
+      ```
+  3.  **Start the Emulators:** Run the new start command from the project root:
+      ```sh
+      npm run start
+      ```
+  4.  **Verify:** Access `http://localhost:3000/stores` and confirm the page loads correctly.
