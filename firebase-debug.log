@@ -382,3 +382,542 @@ INFO: Detected HTTP/2 connection.
 [debug] [2025-08-21T08:15:28.217Z] <<< [apiv2][status] GET http://127.0.0.1:5101/dreampos-94155/us-central1/api/api/stores 200
 [debug] [2025-08-21T08:15:28.218Z] <<< [apiv2][body] GET http://127.0.0.1:5101/dreampos-94155/us-central1/api/api/stores [stream]
 [info] i  hosting: 127.0.0.1 - - [21/Aug/2025:08:15:28 +0000] "GET /api/stores HTTP/1.1" 200 2 "http://localhost:3000/stores" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [21/Aug/2025:08:15:28 +0000] \"GET /api/stores HTTP/1.1\" 200 2 \"http://localhost:3000/stores\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0\""}}
+[debug] [2025-08-21T08:21:40.541Z] ----------------------------------------------------------------------
+[debug] [2025-08-21T08:21:40.549Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\szamb\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2025-08-21T08:21:40.550Z] CLI Version:   14.12.0
+[debug] [2025-08-21T08:21:40.550Z] Platform:      win32
+[debug] [2025-08-21T08:21:40.550Z] Node Version:  v22.17.0
+[debug] [2025-08-21T08:21:40.551Z] Time:          Thu Aug 21 2025 10:21:40 GMT+0200 (heure d’été d’Europe centrale)
+[debug] [2025-08-21T08:21:40.551Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-08-21T08:21:40.557Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2025-08-21T08:21:41.357Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-08-21T08:21:41.357Z] > authorizing via signed-in user (brozerneo@gmail.com)
+[debug] [2025-08-21T08:21:41.358Z] [iam] checking project dreampos-94155 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-08-21T08:21:41.360Z] Checked if tokens are valid: false, expires at: 1755764626392
+[debug] [2025-08-21T08:21:41.360Z] Checked if tokens are valid: false, expires at: 1755764626392
+[debug] [2025-08-21T08:21:41.360Z] > refreshing access token with scopes: []
+[debug] [2025-08-21T08:21:41.362Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-08-21T08:21:41.363Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-08-21T08:21:42.400Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-08-21T08:21:42.400Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-08-21T08:21:42.451Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/dreampos-94155:testIamPermissions [none]
+[debug] [2025-08-21T08:21:42.451Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/dreampos-94155:testIamPermissions x-goog-quota-user=projects/dreampos-94155
+[debug] [2025-08-21T08:21:42.451Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/dreampos-94155:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-08-21T08:21:42.557Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2025-08-21T08:21:42.557Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2025-08-21T08:21:43.395Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/dreampos-94155:testIamPermissions 200
+[debug] [2025-08-21T08:21:43.395Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/dreampos-94155:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-08-21T08:21:43.396Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:21:43.396Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:21:43.396Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/dreampos-94155/serviceAccounts/dreampos-94155@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2025-08-21T08:21:43.396Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/dreampos-94155/serviceAccounts/dreampos-94155@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2025-08-21T08:21:44.282Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/dreampos-94155/serviceAccounts/dreampos-94155@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2025-08-21T08:21:44.282Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/dreampos-94155/serviceAccounts/dreampos-94155@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2025-08-21T08:21:44.283Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:21:44.283Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:21:44.284Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/dreampos-94155 [none]
+[debug] [2025-08-21T08:21:44.750Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/dreampos-94155 200
+[debug] [2025-08-21T08:21:44.751Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/dreampos-94155 {"projectId":"dreampos-94155","projectNumber":"9643074965","displayName":"DREAMPOS","name":"projects/dreampos-94155","resources":{"hostingSite":"dreampos-94155"},"state":"ACTIVE","etag":"1_5fd45011-dbb4-4a77-9c7b-e366588f113a"}
+[info] 
+[info] === Deploying to 'dreampos-94155'...
+[info] 
+[info] i  deploying functions, hosting 
+[info] Running command: npm --prefix "$RESOURCE_DIR" run build
+[debug] [2025-08-21T08:21:51.528Z] File C:\Users\szamb\pos-system\backend\functions\lib\config\firebase.config.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\szamb\\pos-system\\backend\\functions\\lib\\config\\firebase.config.js.map changed, reloading triggers"}}
+[debug] [2025-08-21T08:21:51.538Z] File C:\Users\szamb\pos-system\backend\functions\lib\config\firebase.config.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\szamb\\pos-system\\backend\\functions\\lib\\config\\firebase.config.js changed, reloading triggers"}}
+[debug] [2025-08-21T08:21:51.542Z] File C:\Users\szamb\pos-system\backend\functions\lib\models\User.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\szamb\\pos-system\\backend\\functions\\lib\\models\\User.js.map changed, reloading triggers"}}
+[debug] [2025-08-21T08:21:51.550Z] File C:\Users\szamb\pos-system\backend\functions\lib\models\User.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\szamb\\pos-system\\backend\\functions\\lib\\models\\User.js changed, reloading triggers"}}
+[debug] [2025-08-21T08:21:51.579Z] File C:\Users\szamb\pos-system\backend\functions\lib\api\controllers\auth.controller.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\szamb\\pos-system\\backend\\functions\\lib\\api\\controllers\\auth.controller.js.map changed, reloading triggers"}}
+[debug] [2025-08-21T08:21:51.585Z] File C:\Users\szamb\pos-system\backend\functions\lib\api\controllers\auth.controller.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\szamb\\pos-system\\backend\\functions\\lib\\api\\controllers\\auth.controller.js changed, reloading triggers"}}
+[debug] [2025-08-21T08:21:51.588Z] File C:\Users\szamb\pos-system\backend\functions\lib\api\routes\auth.routes.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\szamb\\pos-system\\backend\\functions\\lib\\api\\routes\\auth.routes.js.map changed, reloading triggers"}}
+[debug] [2025-08-21T08:21:51.597Z] File C:\Users\szamb\pos-system\backend\functions\lib\api\routes\auth.routes.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\szamb\\pos-system\\backend\\functions\\lib\\api\\routes\\auth.routes.js changed, reloading triggers"}}
+[debug] [2025-08-21T08:21:51.600Z] File C:\Users\szamb\pos-system\backend\functions\lib\models\Product.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\szamb\\pos-system\\backend\\functions\\lib\\models\\Product.js.map changed, reloading triggers"}}
+[debug] [2025-08-21T08:21:51.610Z] File C:\Users\szamb\pos-system\backend\functions\lib\models\Product.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\szamb\\pos-system\\backend\\functions\\lib\\models\\Product.js changed, reloading triggers"}}
+[debug] [2025-08-21T08:21:51.635Z] File C:\Users\szamb\pos-system\backend\functions\lib\api\controllers\products.controller.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\szamb\\pos-system\\backend\\functions\\lib\\api\\controllers\\products.controller.js.map changed, reloading triggers"}}
+[debug] [2025-08-21T08:21:51.641Z] File C:\Users\szamb\pos-system\backend\functions\lib\api\controllers\products.controller.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\szamb\\pos-system\\backend\\functions\\lib\\api\\controllers\\products.controller.js changed, reloading triggers"}}
+[debug] [2025-08-21T08:21:51.652Z] File C:\Users\szamb\pos-system\backend\functions\lib\api\middlewares\auth.middleware.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\szamb\\pos-system\\backend\\functions\\lib\\api\\middlewares\\auth.middleware.js.map changed, reloading triggers"}}
+[debug] [2025-08-21T08:21:51.660Z] File C:\Users\szamb\pos-system\backend\functions\lib\api\middlewares\auth.middleware.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\szamb\\pos-system\\backend\\functions\\lib\\api\\middlewares\\auth.middleware.js changed, reloading triggers"}}
+[debug] [2025-08-21T08:21:51.664Z] File C:\Users\szamb\pos-system\backend\functions\lib\api\routes\products.routes.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\szamb\\pos-system\\backend\\functions\\lib\\api\\routes\\products.routes.js.map changed, reloading triggers"}}
+[debug] [2025-08-21T08:21:51.673Z] File C:\Users\szamb\pos-system\backend\functions\lib\api\routes\products.routes.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\szamb\\pos-system\\backend\\functions\\lib\\api\\routes\\products.routes.js changed, reloading triggers"}}
+[debug] [2025-08-21T08:21:51.679Z] File C:\Users\szamb\pos-system\backend\functions\lib\api\routes\sales.routes.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\szamb\\pos-system\\backend\\functions\\lib\\api\\routes\\sales.routes.js.map changed, reloading triggers"}}
+[debug] [2025-08-21T08:21:51.679Z] File C:\Users\szamb\pos-system\backend\functions\lib\api\routes\sales.routes.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\szamb\\pos-system\\backend\\functions\\lib\\api\\routes\\sales.routes.js changed, reloading triggers"}}
+[debug] [2025-08-21T08:21:51.694Z] File C:\Users\szamb\pos-system\backend\functions\lib\api\routes\status.routes.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\szamb\\pos-system\\backend\\functions\\lib\\api\\routes\\status.routes.js.map changed, reloading triggers"}}
+[debug] [2025-08-21T08:21:51.694Z] File C:\Users\szamb\pos-system\backend\functions\lib\api\routes\status.routes.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\szamb\\pos-system\\backend\\functions\\lib\\api\\routes\\status.routes.js changed, reloading triggers"}}
+[debug] [2025-08-21T08:21:51.698Z] File C:\Users\szamb\pos-system\backend\functions\lib\api\controllers\stores.controller.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\szamb\\pos-system\\backend\\functions\\lib\\api\\controllers\\stores.controller.js.map changed, reloading triggers"}}
+[debug] [2025-08-21T08:21:51.705Z] File C:\Users\szamb\pos-system\backend\functions\lib\api\controllers\stores.controller.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\szamb\\pos-system\\backend\\functions\\lib\\api\\controllers\\stores.controller.js changed, reloading triggers"}}
+[debug] [2025-08-21T08:21:51.708Z] File C:\Users\szamb\pos-system\backend\functions\lib\api\routes\stores.routes.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\szamb\\pos-system\\backend\\functions\\lib\\api\\routes\\stores.routes.js.map changed, reloading triggers"}}
+[debug] [2025-08-21T08:21:51.717Z] File C:\Users\szamb\pos-system\backend\functions\lib\api\routes\stores.routes.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\szamb\\pos-system\\backend\\functions\\lib\\api\\routes\\stores.routes.js changed, reloading triggers"}}
+[debug] [2025-08-21T08:21:51.723Z] File C:\Users\szamb\pos-system\backend\functions\lib\index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\szamb\\pos-system\\backend\\functions\\lib\\index.js.map changed, reloading triggers"}}
+[debug] [2025-08-21T08:21:51.724Z] File C:\Users\szamb\pos-system\backend\functions\lib\api\services\firestore.service.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\szamb\\pos-system\\backend\\functions\\lib\\api\\services\\firestore.service.js.map changed, reloading triggers"}}
+[debug] [2025-08-21T08:21:51.740Z] File C:\Users\szamb\pos-system\backend\functions\lib\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\szamb\\pos-system\\backend\\functions\\lib\\index.js changed, reloading triggers"}}
+[debug] [2025-08-21T08:21:51.741Z] File C:\Users\szamb\pos-system\backend\functions\lib\api\services\firestore.service.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\szamb\\pos-system\\backend\\functions\\lib\\api\\services\\firestore.service.js changed, reloading triggers"}}
+[debug] [2025-08-21T08:21:51.744Z] File C:\Users\szamb\pos-system\backend\functions\lib\scripts\createAdmin.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\szamb\\pos-system\\backend\\functions\\lib\\scripts\\createAdmin.js.map changed, reloading triggers"}}
+[debug] [2025-08-21T08:21:51.751Z] File C:\Users\szamb\pos-system\backend\functions\lib\scripts\createAdmin.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\szamb\\pos-system\\backend\\functions\\lib\\scripts\\createAdmin.js changed, reloading triggers"}}
+[debug] [2025-08-21T08:21:51.757Z] File C:\Users\szamb\pos-system\backend\functions\lib\scripts\readAdmin.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\szamb\\pos-system\\backend\\functions\\lib\\scripts\\readAdmin.js.map changed, reloading triggers"}}
+[debug] [2025-08-21T08:21:51.765Z] File C:\Users\szamb\pos-system\backend\functions\lib\scripts\readAdmin.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\szamb\\pos-system\\backend\\functions\\lib\\scripts\\readAdmin.js changed, reloading triggers"}}
+[info] +  functions: Finished running predeploy script. 
+[debug] [2025-08-21T08:21:51.938Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:21:51.939Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:21:51.939Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/dreampos-94155 [none]
+[debug] [2025-08-21T08:21:52.782Z] Validating nodejs source
+[debug] [2025-08-21T08:21:53.073Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/dreampos-94155 200
+[debug] [2025-08-21T08:21:53.074Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/dreampos-94155 {"projectNumber":"9643074965","projectId":"dreampos-94155","lifecycleState":"ACTIVE","name":"DREAMPOS","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2025-08-10T14:11:43.766694Z"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2025-08-21T08:21:53.078Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:21:53.078Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:21:53.079Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/dreampos-94155/adminSdkConfig [none]
+[debug] [2025-08-21T08:21:53.564Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/dreampos-94155/adminSdkConfig 200
+[debug] [2025-08-21T08:21:53.564Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/dreampos-94155/adminSdkConfig {"projectId":"dreampos-94155","storageBucket":"dreampos-94155.firebasestorage.app"}
+[debug] [2025-08-21T08:21:53.565Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:21:53.565Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:21:53.565Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/dreampos-94155/configs [none]
+[debug] [2025-08-21T08:21:54.483Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/dreampos-94155/configs 200
+[debug] [2025-08-21T08:21:54.484Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/dreampos-94155/configs {}
+[debug] [2025-08-21T08:21:55.163Z] > [functions] package.json contents: {
+  "name": "pos-backend",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc",
+    "serve": "firebase emulators:start --only functions,firestore",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log",
+    "create-admin": "cross-env GCLOUD_PROJECT=dreampos-94155 FIRESTORE_EMULATOR_HOST=127.0.0.1:8180 ts-node src/scripts/createAdmin.ts",
+    "read-admin": "cross-env GCLOUD_PROJECT=poszambo FIRESTORE_EMULATOR_HOST=127.0.0.1:8180 ts-node src/scripts/readAdmin.ts"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "firebase-admin": "^12.1.0",
+    "firebase-functions": "^6.4.0",
+    "joi": "^17.13.1",
+    "jsonwebtoken": "^9.0.2",
+    "pos-system-root": "file:../.."
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.6",
+    "cross-env": "^10.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}
+[debug] [2025-08-21T08:21:55.164Z] Building nodejs source
+[debug] [2025-08-21T08:21:55.164Z] Failed to find version of module node: reached end of search path C:\Users\szamb\pos-system\backend\functions\node_modules
+[info] +  functions: Using node@22 from host. 
+[debug] [2025-08-21T08:21:55.167Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-08-21T08:21:55.191Z] Found firebase-functions binary at 'C:\Users\szamb\pos-system\backend\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8991
+
+[debug] [2025-08-21T08:21:54.486Z] Validating nodejs source
+[debug] [2025-08-21T08:21:57.636Z] > [functions] package.json contents: {
+  "name": "pos-backend",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc",
+    "serve": "firebase emulators:start --only functions,firestore",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log",
+    "create-admin": "cross-env GCLOUD_PROJECT=dreampos-94155 FIRESTORE_EMULATOR_HOST=127.0.0.1:8180 ts-node src/scripts/createAdmin.ts",
+    "read-admin": "cross-env GCLOUD_PROJECT=poszambo FIRESTORE_EMULATOR_HOST=127.0.0.1:8180 ts-node src/scripts/readAdmin.ts"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "firebase-admin": "^12.1.0",
+    "firebase-functions": "^6.4.0",
+    "joi": "^17.13.1",
+    "jsonwebtoken": "^9.0.2",
+    "pos-system-root": "file:../.."
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.6",
+    "cross-env": "^10.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}
+[debug] [2025-08-21T08:21:57.636Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase default to determine what to deploy 
+[debug] [2025-08-21T08:21:57.641Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-08-21T08:21:57.683Z] Found firebase-functions binary at 'C:\Users\szamb\pos-system\backend\functions\node_modules\.bin\firebase-functions'
+[debug] [2025-08-21T08:21:58.408Z] Got response from /__/functions.yaml {"endpoints":{"api":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] Serving at port 8070
+
+[debug] [2025-08-21T08:22:00.125Z] Got response from /__/functions.yaml {"endpoints":{"api":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] +  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2025-08-21T08:22:02.464Z] [worker-pool] Shutting down IDLE worker (us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-api)"}}
+[debug] [2025-08-21T08:22:02.465Z] [worker-us-central1-api-50ba0e8b-8d9c-457b-9b15-241c6774c28a]: FINISHING {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-50ba0e8b-8d9c-457b-9b15-241c6774c28a]: FINISHING"}}
+[debug] [2025-08-21T08:22:02.479Z] Aug 21, 2025 10:22:02 AM io.netty.channel.DefaultChannelPipeline onUnhandledInboundException
+WARNING: An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:994)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Aug 21, 2025 10:22:02 AM io.netty.channel.DefaultChannelPipeline onUnhandledInboundException\r\nWARNING: An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.\r\njava.net.SocketException: Connection reset\r\n\tat java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)\r\n\tat java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)\r\n\tat io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255)\r\n\tat io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)\r\n\tat io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356)\r\n\tat io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)\r\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)\r\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)\r\n\tat io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)\r\n\tat io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)\r\n\tat io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:994)\r\n\tat io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)\r\n\tat io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)\r\n\tat java.base/java.lang.Thread.run(Thread.java:1583)\r\n\r\n"}}
+[debug] [2025-08-21T08:22:02.493Z] [worker-us-central1-api-50ba0e8b-8d9c-457b-9b15-241c6774c28a]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-50ba0e8b-8d9c-457b-9b15-241c6774c28a]: exited"}}
+[debug] [2025-08-21T08:22:02.493Z] [worker-us-central1-api-50ba0e8b-8d9c-457b-9b15-241c6774c28a]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-50ba0e8b-8d9c-457b-9b15-241c6774c28a]: FINISHED"}}
+[info] i  extensions: ensuring required API firebaseextensions.googleapis.com is enabled... 
+[debug] [2025-08-21T08:22:04.222Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-08-21T08:22:04.222Z] > authorizing via signed-in user (brozerneo@gmail.com)
+[debug] [2025-08-21T08:22:04.223Z] [iam] checking project dreampos-94155 for permissions ["firebase.projects.get","firebaseextensions.instances.list"]
+[debug] [2025-08-21T08:22:04.223Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:22:04.223Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:22:04.224Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/dreampos-94155:testIamPermissions [none]
+[debug] [2025-08-21T08:22:04.224Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/dreampos-94155:testIamPermissions x-goog-quota-user=projects/dreampos-94155
+[debug] [2025-08-21T08:22:04.224Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/dreampos-94155:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
+[debug] [2025-08-21T08:22:05.136Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/dreampos-94155:testIamPermissions 200
+[debug] [2025-08-21T08:22:05.137Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/dreampos-94155:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
+[debug] [2025-08-21T08:22:05.138Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:22:05.139Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:22:05.139Z] >>> [apiv2][query] GET https://firebaseextensions.googleapis.com/v1beta/projects/dreampos-94155/instances pageSize=100&pageToken=
+[debug] [2025-08-21T08:22:06.167Z] <<< [apiv2][status] GET https://firebaseextensions.googleapis.com/v1beta/projects/dreampos-94155/instances 200
+[debug] [2025-08-21T08:22:06.167Z] <<< [apiv2][body] GET https://firebaseextensions.googleapis.com/v1beta/projects/dreampos-94155/instances {}
+[info] i  functions: preparing backend/functions directory for uploading... 
+[info] i  functions: packaged C:\Users\szamb\pos-system\backend\functions (86.71 KB) for uploading 
+[debug] [2025-08-21T08:22:06.755Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:22:06.755Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:22:06.756Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/dreampos-94155/locations/-/functions [none]
+[debug] [2025-08-21T08:22:07.762Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/dreampos-94155/locations/-/functions 200
+[debug] [2025-08-21T08:22:07.762Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/dreampos-94155/locations/-/functions {}
+[debug] [2025-08-21T08:22:07.763Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:22:07.763Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:22:07.763Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/dreampos-94155/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2025-08-21T08:22:08.852Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/dreampos-94155/locations/-/functions 200
+[debug] [2025-08-21T08:22:08.853Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/dreampos-94155/locations/-/functions {"functions":[{"name":"projects/dreampos-94155/locations/us-central1/functions/api","buildConfig":{"build":"projects/9643074965/locations/us-central1/builds/631f787f-4f24-41ed-8a22-bdef86f6497e","runtime":"nodejs22","entryPoint":"api","source":{"storageSource":{"bucket":"gcf-v2-sources-9643074965-us-central1","object":"api/function-source.zip","generation":"1755589740145194"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/dreampos-94155/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-9643074965-us-central1","object":"api/function-source.zip","generation":"1755589740145194"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/dreampos-94155/serviceAccounts/9643074965-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/dreampos-94155/locations/us-central1/services/api","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"dreampos-94155\",\"storageBucket\":\"dreampos-94155.firebasestorage.app\"}","GCLOUD_PROJECT":"dreampos-94155","EVENTARC_CLOUD_EVENT_SOURCE":"projects/dreampos-94155/locations/us-central1/services/api","FUNCTION_TARGET":"api","LOG_EXECUTION_ID":"true"},"maxInstanceCount":20,"ingressSettings":"ALLOW_ALL","uri":"https://api-3gprbkbsaq-uc.a.run.app","serviceAccountEmail":"9643074965-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"api-00004-lek","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","updateTime":"2025-08-19T07:50:02.400464277Z","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"c66968ed421a512374690c6112cb9441b18acc1e"},"environment":"GEN_2","url":"https://us-central1-dreampos-94155.cloudfunctions.net/api","createTime":"2025-08-10T14:28:05.990792379Z","satisfiesPzi":true}]}
+[info] i  functions: ensuring required API run.googleapis.com is enabled... 
+[info] i  functions: ensuring required API eventarc.googleapis.com is enabled... 
+[info] i  functions: ensuring required API pubsub.googleapis.com is enabled... 
+[info] i  functions: ensuring required API storage.googleapis.com is enabled... 
+[info] i  functions: generating the service identity for pubsub.googleapis.com... 
+[debug] [2025-08-21T08:22:08.861Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:22:08.862Z] Checked if tokens are valid: true, expires at: 1755768101401
+[info] i  functions: generating the service identity for eventarc.googleapis.com... 
+[debug] [2025-08-21T08:22:08.862Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:22:08.862Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:22:08.862Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/9643074965/services/pubsub.googleapis.com:generateServiceIdentity [none]
+[debug] [2025-08-21T08:22:08.862Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1beta1/projects/9643074965/services/pubsub.googleapis.com:generateServiceIdentity x-goog-quota-user=projects/9643074965
+[debug] [2025-08-21T08:22:08.862Z] >>> [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/9643074965/services/pubsub.googleapis.com:generateServiceIdentity {}
+[debug] [2025-08-21T08:22:08.864Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/9643074965/services/eventarc.googleapis.com:generateServiceIdentity [none]
+[debug] [2025-08-21T08:22:08.864Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1beta1/projects/9643074965/services/eventarc.googleapis.com:generateServiceIdentity x-goog-quota-user=projects/9643074965
+[debug] [2025-08-21T08:22:08.864Z] >>> [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/9643074965/services/eventarc.googleapis.com:generateServiceIdentity {}
+[debug] [2025-08-21T08:22:09.930Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/9643074965/services/eventarc.googleapis.com:generateServiceIdentity 200
+[debug] [2025-08-21T08:22:09.930Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/9643074965/services/eventarc.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-9643074965@gcp-sa-eventarc.iam.gserviceaccount.com","uniqueId":"108754984557562904584"}}
+[debug] [2025-08-21T08:22:09.938Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/9643074965/services/pubsub.googleapis.com:generateServiceIdentity 200
+[debug] [2025-08-21T08:22:09.939Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/9643074965/services/pubsub.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-9643074965@gcp-sa-pubsub.iam.gserviceaccount.com","uniqueId":"103401939233533216385"}}
+[debug] [2025-08-21T08:22:09.943Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:22:09.943Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:22:09.943Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/dreampos-94155 [none]
+[debug] [2025-08-21T08:22:10.254Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/dreampos-94155 200
+[debug] [2025-08-21T08:22:10.254Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/dreampos-94155 {"projectNumber":"9643074965","projectId":"dreampos-94155","lifecycleState":"ACTIVE","name":"DREAMPOS","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2025-08-10T14:11:43.766694Z"}
+[debug] [2025-08-21T08:22:10.255Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:22:10.255Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:22:10.255Z] >>> [apiv2][query] GET https://compute.googleapis.com/compute/v1/projects/9643074965 [none]
+[debug] [2025-08-21T08:22:10.766Z] <<< [apiv2][status] GET https://compute.googleapis.com/compute/v1/projects/9643074965 403
+[debug] [2025-08-21T08:22:10.767Z] <<< [apiv2][body] GET https://compute.googleapis.com/compute/v1/projects/9643074965 {"error":{"code":403,"message":"Compute Engine API has not been used in project 9643074965 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=9643074965 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","errors":[{"message":"Compute Engine API has not been used in project 9643074965 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=9643074965 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","domain":"usageLimits","reason":"accessNotConfigured","extendedHelp":"https://console.developers.google.com"}],"status":"PERMISSION_DENIED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"SERVICE_DISABLED","domain":"googleapis.com","metadata":{"activationUrl":"https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=9643074965","serviceTitle":"Compute Engine API","consumer":"projects/9643074965","containerInfo":"9643074965","service":"compute.googleapis.com"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"Compute Engine API has not been used in project 9643074965 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=9643074965 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Google developers console API activation","url":"https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=9643074965"}]}]}}
+[debug] [2025-08-21T08:22:10.769Z] unable to look up default compute service account. Falling back to 9643074965-compute@developer.gserviceaccount.com. Error: {"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":403,"message":"Compute Engine API has not been used in project 9643074965 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=9643074965 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","errors":[{"message":"Compute Engine API has not been used in project 9643074965 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=9643074965 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","domain":"usageLimits","reason":"accessNotConfigured","extendedHelp":"https://console.developers.google.com"}],"status":"PERMISSION_DENIED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"SERVICE_DISABLED","domain":"googleapis.com","metadata":{"activationUrl":"https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=9643074965","serviceTitle":"Compute Engine API","consumer":"projects/9643074965","containerInfo":"9643074965","service":"compute.googleapis.com"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"Compute Engine API has not been used in project 9643074965 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=9643074965 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Google developers console API activation","url":"https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=9643074965"}]}]}},"response":{"statusCode":403}},"exit":1,"message":"Request to https://compute.googleapis.com/compute/v1/projects/9643074965 had HTTP Error: 403, Compute Engine API has not been used in project 9643074965 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=9643074965 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","status":403}
+[debug] [2025-08-21T08:22:10.776Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:22:10.776Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:22:10.776Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dreampos-94155/versions [none]
+[debug] [2025-08-21T08:22:10.777Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dreampos-94155/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2025-08-21T08:22:12.013Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dreampos-94155/versions 200
+[debug] [2025-08-21T08:22:12.013Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dreampos-94155/versions {"name":"projects/9643074965/sites/dreampos-94155/versions/7a06674fffb6fcd0","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2025-08-21T08:22:12.014Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:22:12.014Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:22:12.014Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/dreampos-94155/billingInfo [none]
+[debug] [2025-08-21T08:22:12.712Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/dreampos-94155/billingInfo 200
+[debug] [2025-08-21T08:22:12.712Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/dreampos-94155/billingInfo {"name":"projects/dreampos-94155/billingInfo","projectId":"dreampos-94155","billingAccountName":"billingAccounts/016556-9F8F00-332136","billingEnabled":true}
+[debug] [2025-08-21T08:22:12.716Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:22:12.716Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:22:12.716Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/dreampos-94155/locations/us-central1/functions:generateUploadUrl [none]
+[debug] [2025-08-21T08:22:13.524Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/dreampos-94155/locations/us-central1/functions:generateUploadUrl 200
+[debug] [2025-08-21T08:22:13.524Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/dreampos-94155/locations/us-central1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/gcf-v2-uploads-9643074965.us-central1.cloudfunctions.appspot.com/516679a8-82b5-4cfa-b901-f77857b0bb70.zip?GoogleAccessId=service-9643074965@gcf-admin-robot.iam.gserviceaccount.com&Expires=1755766333&Signature=h2L1qArm27v6PiAoh4RmgGzY1xcFDGjYhXVzSFMJse9TdPJL8HpdHhJAKC16W5eFtiZ%2Ft3o6csXvqFkyB2yIjYgZDjsQCk4ua%2BIBHy3K2%2F1lxxjSsPzWm15e7DNpXFc9OC3KneIo7GRHGw6ELz%2Bt%2Foxhudbdj9TUECB5Lu%2FnFTJrJEqgY5Km2EwnwS8zr%2B7ZZySZZvqfg7LbVY5cPrsX8QFkg8irGWynq9ERDhjL5oK7Q8ZY%2FxUz6By9xQon%2BKnjE4ObPYcAr2CynmBjlf8MlhEf7gSdE0RjeNhdIqndPllTXaejpoCovVCm7xfCnAN%2FwacA0J7izV37YBcROKFGgA%3D%3D","storageSource":{"bucket":"gcf-v2-uploads-9643074965.us-central1.cloudfunctions.appspot.com","object":"516679a8-82b5-4cfa-b901-f77857b0bb70.zip"}}
+[debug] [2025-08-21T08:22:13.527Z] >>> [apiv2][query] PUT https://storage.googleapis.com/gcf-v2-uploads-9643074965.us-central1.cloudfunctions.appspot.com/516679a8-82b5-4cfa-b901-f77857b0bb70.zip GoogleAccessId=service-9643074965%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1755766333&Signature=h2L1qArm27v6PiAoh4RmgGzY1xcFDGjYhXVzSFMJse9TdPJL8HpdHhJAKC16W5eFtiZ%2Ft3o6csXvqFkyB2yIjYgZDjsQCk4ua%2BIBHy3K2%2F1lxxjSsPzWm15e7DNpXFc9OC3KneIo7GRHGw6ELz%2Bt%2Foxhudbdj9TUECB5Lu%2FnFTJrJEqgY5Km2EwnwS8zr%2B7ZZySZZvqfg7LbVY5cPrsX8QFkg8irGWynq9ERDhjL5oK7Q8ZY%2FxUz6By9xQon%2BKnjE4ObPYcAr2CynmBjlf8MlhEf7gSdE0RjeNhdIqndPllTXaejpoCovVCm7xfCnAN%2FwacA0J7izV37YBcROKFGgA%3D%3D
+[debug] [2025-08-21T08:22:13.527Z] >>> [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-9643074965.us-central1.cloudfunctions.appspot.com/516679a8-82b5-4cfa-b901-f77857b0bb70.zip [stream]
+[debug] [2025-08-21T08:22:14.364Z] <<< [apiv2][status] PUT https://storage.googleapis.com/gcf-v2-uploads-9643074965.us-central1.cloudfunctions.appspot.com/516679a8-82b5-4cfa-b901-f77857b0bb70.zip 200
+[debug] [2025-08-21T08:22:14.364Z] <<< [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-9643074965.us-central1.cloudfunctions.appspot.com/516679a8-82b5-4cfa-b901-f77857b0bb70.zip [omitted]
+[info] +  functions: backend/functions folder uploaded successfully 
+[info] i  hosting[dreampos-94155]: beginning deploy... 
+[info] i  hosting[dreampos-94155]: found 14 files in frontend/build 
+[debug] [2025-08-21T08:22:14.406Z] [hosting] uploading with 200 concurrency
+[debug] [2025-08-21T08:22:15.168Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:22:15.168Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:22:15.172Z] [hosting] hash cache [ZnJvbnRlbmRcYnVpbGQ] stored for 14 files
+[debug] [2025-08-21T08:22:15.173Z] [hosting][hash queue][FINAL] {"max":753,"min":4,"avg":70,"active":0,"complete":14,"success":14,"errored":0,"retried":0,"total":14,"elapsed":764}
+[debug] [2025-08-21T08:22:15.173Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/9643074965/sites/dreampos-94155/versions/7a06674fffb6fcd0:populateFiles [none]
+[debug] [2025-08-21T08:22:15.174Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/9643074965/sites/dreampos-94155/versions/7a06674fffb6fcd0:populateFiles {"files":{"/robots.txt":"b2090cf9761ef60aa06e4fab97679bd43dfa5e5df073701ead5879d7c68f1ec5","/manifest.json":"4368aeaf848ae2e048765562c289452f33ad2a175c4b1951ea8bdf2ada0d5b10","/logo512.png":"212b102aa09e51b3b3e06647e81f7801a61333e171f6582e8124379aabccb41d","/logo192.png":"79e2b749561016bc8af300ea19f48347ceed3cb1a54f48ae456172eca45e08f0","/favicon.ico":"27edce7be5922cf0bef7d4136f69b5bfbdd5bf8c13c7b026f71187d41a00aa7d","/index.html":"d08a78d48c0b2f1469960f4c5a2d7c8f39b70da2f53f9bc81db8bef0c5f0d529","/asset-manifest.json":"6737b48d512c878e2b2f45466c54958c2deaa78cd5798dd94cc0f8c4d1ec4be2","/static/js/main.64d83e71.js.LICENSE.txt":"8b1dfd5bca4a70a58fea7c54392f9a90c0181c7f55781ca4bc4dcf2b5b71ca08","/static/js/453.670e15c7.chunk.js":"dc62353756582df1953e26dada06784d9dd3aee1f9dec9326c1a7b92a79aadcf","/static/css/main.0da6b2bb.css.map":"1a3b19b85b21364c8cee3027bdf644f851c2dce4e13fc06ae5cf5f65a7d897a0","/static/css/main.0da6b2bb.css":"fc20d863a3711fc41cff601e6ec0567a33498b03637748180568525dd6c1511f","/static/js/453.670e15c7.chunk.js.map":"9418a44427df14334669686b787d32c6b00703a7831b1789f71932ce5256b9e3","/static/js/main.64d83e71.js":"5c306ce8620ddc8481aa845a61a8e8f329a80e5167307bc3eb034e2ad6fbd681","/static/js/main.64d83e71.js.map":"979a595e23ad36f0073e7ec880a588473737362793f2878939efe0446cf41eff"}}
+[info] i  hosting: adding files to version [0/14] (0%) 
+[debug] [2025-08-21T08:22:17.528Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/9643074965/sites/dreampos-94155/versions/7a06674fffb6fcd0:populateFiles 200
+[debug] [2025-08-21T08:22:17.528Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/9643074965/sites/dreampos-94155/versions/7a06674fffb6fcd0:populateFiles {"uploadRequiredHashes":["979a595e23ad36f0073e7ec880a588473737362793f2878939efe0446cf41eff","d08a78d48c0b2f1469960f4c5a2d7c8f39b70da2f53f9bc81db8bef0c5f0d529","6737b48d512c878e2b2f45466c54958c2deaa78cd5798dd94cc0f8c4d1ec4be2","5c306ce8620ddc8481aa845a61a8e8f329a80e5167307bc3eb034e2ad6fbd681","fc20d863a3711fc41cff601e6ec0567a33498b03637748180568525dd6c1511f","1a3b19b85b21364c8cee3027bdf644f851c2dce4e13fc06ae5cf5f65a7d897a0"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/dreampos-94155/versions/7a06674fffb6fcd0/files"}
+[debug] [2025-08-21T08:22:17.529Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:22:17.530Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:22:17.530Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:22:17.530Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:22:17.531Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:22:17.531Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:22:17.531Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:22:17.531Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:22:17.531Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:22:17.531Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:22:17.532Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:22:17.532Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:22:17.532Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/dreampos-94155/versions/7a06674fffb6fcd0/files/979a595e23ad36f0073e7ec880a588473737362793f2878939efe0446cf41eff [none]
+[debug] [2025-08-21T08:22:17.532Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/dreampos-94155/versions/7a06674fffb6fcd0/files/979a595e23ad36f0073e7ec880a588473737362793f2878939efe0446cf41eff [stream]
+[debug] [2025-08-21T08:22:17.535Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/dreampos-94155/versions/7a06674fffb6fcd0/files/d08a78d48c0b2f1469960f4c5a2d7c8f39b70da2f53f9bc81db8bef0c5f0d529 [none]
+[debug] [2025-08-21T08:22:17.535Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/dreampos-94155/versions/7a06674fffb6fcd0/files/d08a78d48c0b2f1469960f4c5a2d7c8f39b70da2f53f9bc81db8bef0c5f0d529 [stream]
+[debug] [2025-08-21T08:22:17.537Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/dreampos-94155/versions/7a06674fffb6fcd0/files/6737b48d512c878e2b2f45466c54958c2deaa78cd5798dd94cc0f8c4d1ec4be2 [none]
+[debug] [2025-08-21T08:22:17.538Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/dreampos-94155/versions/7a06674fffb6fcd0/files/6737b48d512c878e2b2f45466c54958c2deaa78cd5798dd94cc0f8c4d1ec4be2 [stream]
+[debug] [2025-08-21T08:22:17.540Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/dreampos-94155/versions/7a06674fffb6fcd0/files/5c306ce8620ddc8481aa845a61a8e8f329a80e5167307bc3eb034e2ad6fbd681 [none]
+[debug] [2025-08-21T08:22:17.540Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/dreampos-94155/versions/7a06674fffb6fcd0/files/5c306ce8620ddc8481aa845a61a8e8f329a80e5167307bc3eb034e2ad6fbd681 [stream]
+[debug] [2025-08-21T08:22:17.542Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/dreampos-94155/versions/7a06674fffb6fcd0/files/fc20d863a3711fc41cff601e6ec0567a33498b03637748180568525dd6c1511f [none]
+[debug] [2025-08-21T08:22:17.542Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/dreampos-94155/versions/7a06674fffb6fcd0/files/fc20d863a3711fc41cff601e6ec0567a33498b03637748180568525dd6c1511f [stream]
+[debug] [2025-08-21T08:22:17.547Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/dreampos-94155/versions/7a06674fffb6fcd0/files/1a3b19b85b21364c8cee3027bdf644f851c2dce4e13fc06ae5cf5f65a7d897a0 [none]
+[debug] [2025-08-21T08:22:17.548Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/dreampos-94155/versions/7a06674fffb6fcd0/files/1a3b19b85b21364c8cee3027bdf644f851c2dce4e13fc06ae5cf5f65a7d897a0 [stream]
+[debug] [2025-08-21T08:22:17.550Z] [hosting][populate queue][FINAL] {"max":2364,"min":2364,"avg":2364,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":2382}
+[debug] [2025-08-21T08:22:17.550Z] [hosting] uploads queued: 6
+[info] i  hosting: uploading new files [0/6] (0%) 
+[debug] [2025-08-21T08:22:18.851Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/dreampos-94155/versions/7a06674fffb6fcd0/files/d08a78d48c0b2f1469960f4c5a2d7c8f39b70da2f53f9bc81db8bef0c5f0d529 200
+[debug] [2025-08-21T08:22:18.852Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/dreampos-94155/versions/7a06674fffb6fcd0/files/d08a78d48c0b2f1469960f4c5a2d7c8f39b70da2f53f9bc81db8bef0c5f0d529 [stream]
+[debug] [2025-08-21T08:22:18.971Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/dreampos-94155/versions/7a06674fffb6fcd0/files/6737b48d512c878e2b2f45466c54958c2deaa78cd5798dd94cc0f8c4d1ec4be2 200
+[debug] [2025-08-21T08:22:18.971Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/dreampos-94155/versions/7a06674fffb6fcd0/files/6737b48d512c878e2b2f45466c54958c2deaa78cd5798dd94cc0f8c4d1ec4be2 [stream]
+[debug] [2025-08-21T08:22:19.126Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/dreampos-94155/versions/7a06674fffb6fcd0/files/1a3b19b85b21364c8cee3027bdf644f851c2dce4e13fc06ae5cf5f65a7d897a0 200
+[debug] [2025-08-21T08:22:19.126Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/dreampos-94155/versions/7a06674fffb6fcd0/files/1a3b19b85b21364c8cee3027bdf644f851c2dce4e13fc06ae5cf5f65a7d897a0 [stream]
+[debug] [2025-08-21T08:22:19.729Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/dreampos-94155/versions/7a06674fffb6fcd0/files/fc20d863a3711fc41cff601e6ec0567a33498b03637748180568525dd6c1511f 200
+[debug] [2025-08-21T08:22:19.729Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/dreampos-94155/versions/7a06674fffb6fcd0/files/fc20d863a3711fc41cff601e6ec0567a33498b03637748180568525dd6c1511f [stream]
+[debug] [2025-08-21T08:22:19.862Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/dreampos-94155/versions/7a06674fffb6fcd0/files/5c306ce8620ddc8481aa845a61a8e8f329a80e5167307bc3eb034e2ad6fbd681 200
+[debug] [2025-08-21T08:22:19.863Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/dreampos-94155/versions/7a06674fffb6fcd0/files/5c306ce8620ddc8481aa845a61a8e8f329a80e5167307bc3eb034e2ad6fbd681 [stream]
+[info] i  hosting: uploading new files [5/6] (83%) 
+[debug] [2025-08-21T08:22:21.195Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/dreampos-94155/versions/7a06674fffb6fcd0/files/979a595e23ad36f0073e7ec880a588473737362793f2878939efe0446cf41eff 200
+[debug] [2025-08-21T08:22:21.195Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/dreampos-94155/versions/7a06674fffb6fcd0/files/979a595e23ad36f0073e7ec880a588473737362793f2878939efe0446cf41eff [stream]
+[debug] [2025-08-21T08:22:21.195Z] [hosting][upload queue][FINAL] {"max":3667,"min":1322,"avg":2092.5,"active":0,"complete":6,"success":6,"errored":0,"retried":0,"total":6,"elapsed":3667}
+[info] i  hosting: upload complete 
+[info] +  hosting[dreampos-94155]: file upload complete 
+[debug] [2025-08-21T08:22:21.196Z] [hosting] deploy completed after 6825ms
+[info] i  functions: updating Node.js 22 (2nd Gen) function api(us-central1)... 
+[debug] [2025-08-21T08:22:21.205Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:22:21.206Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:22:21.206Z] >>> [apiv2][query] PATCH https://cloudfunctions.googleapis.com/v2/projects/dreampos-94155/locations/us-central1/functions/api updateMask=name%2CbuildConfig.runtime%2CbuildConfig.entryPoint%2CbuildConfig.source.storageSource.bucket%2CbuildConfig.source.storageSource.object%2CbuildConfig.environmentVariables%2CbuildConfig.sourceToken%2CserviceConfig.environmentVariables%2CserviceConfig.ingressSettings%2CserviceConfig.timeoutSeconds%2CserviceConfig.serviceAccountEmail%2CserviceConfig.availableMemory%2CserviceConfig.minInstanceCount%2CserviceConfig.maxInstanceCount%2CserviceConfig.maxInstanceRequestConcurrency%2CserviceConfig.availableCpu%2CserviceConfig.vpcConnector%2CserviceConfig.vpcConnectorEgressSettings%2Clabels
+[debug] [2025-08-21T08:22:21.206Z] >>> [apiv2][body] PATCH https://cloudfunctions.googleapis.com/v2/projects/dreampos-94155/locations/us-central1/functions/api {"name":"projects/dreampos-94155/locations/us-central1/functions/api","buildConfig":{"runtime":"nodejs22","entryPoint":"api","source":{"storageSource":{"bucket":"gcf-v2-uploads-9643074965.us-central1.cloudfunctions.appspot.com","object":"516679a8-82b5-4cfa-b901-f77857b0bb70.zip"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""}},"serviceConfig":{"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"dreampos-94155\",\"storageBucket\":\"dreampos-94155.firebasestorage.app\"}","GCLOUD_PROJECT":"dreampos-94155","EVENTARC_CLOUD_EVENT_SOURCE":"projects/dreampos-94155/locations/us-central1/services/api","FUNCTION_TARGET":"api","LOG_EXECUTION_ID":"true"},"ingressSettings":null,"timeoutSeconds":null,"serviceAccountEmail":null,"availableMemory":"256Mi","minInstanceCount":null,"maxInstanceCount":null,"maxInstanceRequestConcurrency":80,"availableCpu":"1","vpcConnector":null,"vpcConnectorEgressSettings":null},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"726db92b6c050a05b343e19f342865412b4c927c"}}
+[debug] [2025-08-21T08:22:23.288Z] <<< [apiv2][status] PATCH https://cloudfunctions.googleapis.com/v2/projects/dreampos-94155/locations/us-central1/functions/api 200
+[debug] [2025-08-21T08:22:23.288Z] <<< [apiv2][body] PATCH https://cloudfunctions.googleapis.com/v2/projects/dreampos-94155/locations/us-central1/functions/api {"name":"projects/dreampos-94155/locations/us-central1/operations/operation-1755764541735-63cdbc9d1c3f0-cee9fa8b-44b288b6","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2025-08-21T08:22:22.932916384Z","target":"projects/dreampos-94155/locations/us-central1/functions/api","verb":"update","cancelRequested":false,"apiVersion":"v2"},"done":false}
+[debug] [2025-08-21T08:22:23.290Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:22:23.290Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:22:23.290Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/dreampos-94155/locations/us-central1/operations/operation-1755764541735-63cdbc9d1c3f0-cee9fa8b-44b288b6 [none]
+[debug] [2025-08-21T08:22:24.022Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/dreampos-94155/locations/us-central1/operations/operation-1755764541735-63cdbc9d1c3f0-cee9fa8b-44b288b6 200
+[debug] [2025-08-21T08:22:24.023Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/dreampos-94155/locations/us-central1/operations/operation-1755764541735-63cdbc9d1c3f0-cee9fa8b-44b288b6 {"name":"projects/dreampos-94155/locations/us-central1/operations/operation-1755764541735-63cdbc9d1c3f0-cee9fa8b-44b288b6","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2025-08-21T08:22:22.932916384Z","target":"projects/dreampos-94155/locations/us-central1/functions/api","verb":"update","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/dreampos-94155/locations/us-central1/functions/api","buildConfig":{"runtime":"nodejs22","entryPoint":"api","source":{"storageSource":{"bucket":"gcf-v2-sources-9643074965-us-central1","object":"api/function-source.zip","generation":"1755764542846646"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/dreampos-94155/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-9643074965-us-central1","object":"api/function-source.zip","generation":"1755589740145194"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/dreampos-94155/serviceAccounts/9643074965-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/dreampos-94155/locations/us-central1/services/api","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"dreampos-94155\",\"storageBucket\":\"dreampos-94155.firebasestorage.app\"}","GCLOUD_PROJECT":"dreampos-94155","EVENTARC_CLOUD_EVENT_SOURCE":"projects/dreampos-94155/locations/us-central1/services/api","FUNCTION_TARGET":"api","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","uri":"https://api-3gprbkbsaq-uc.a.run.app","serviceAccountEmail":"9643074965-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"api-00004-lek","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"726db92b6c050a05b343e19f342865412b4c927c"},"environment":"GEN_2","url":"https://us-central1-dreampos-94155.cloudfunctions.net/api","satisfiesPzi":true},"stages":[{"name":"BUILD","state":"NOT_STARTED"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"UPDATE_FUNCTION"},"done":false}
+[debug] [2025-08-21T08:22:24.532Z] [update-default-us-central1-api] Retrying task index 0
+[debug] [2025-08-21T08:22:24.533Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:22:24.533Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:22:24.533Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/dreampos-94155/locations/us-central1/operations/operation-1755764541735-63cdbc9d1c3f0-cee9fa8b-44b288b6 [none]
+[debug] [2025-08-21T08:22:25.310Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/dreampos-94155/locations/us-central1/operations/operation-1755764541735-63cdbc9d1c3f0-cee9fa8b-44b288b6 200
+[debug] [2025-08-21T08:22:25.310Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/dreampos-94155/locations/us-central1/operations/operation-1755764541735-63cdbc9d1c3f0-cee9fa8b-44b288b6 {"name":"projects/dreampos-94155/locations/us-central1/operations/operation-1755764541735-63cdbc9d1c3f0-cee9fa8b-44b288b6","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2025-08-21T08:22:22.932916384Z","target":"projects/dreampos-94155/locations/us-central1/functions/api","verb":"update","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/dreampos-94155/locations/us-central1/functions/api","buildConfig":{"runtime":"nodejs22","entryPoint":"api","source":{"storageSource":{"bucket":"gcf-v2-sources-9643074965-us-central1","object":"api/function-source.zip","generation":"1755764542846646"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/dreampos-94155/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-9643074965-us-central1","object":"api/function-source.zip","generation":"1755589740145194"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/dreampos-94155/serviceAccounts/9643074965-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/dreampos-94155/locations/us-central1/services/api","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"dreampos-94155\",\"storageBucket\":\"dreampos-94155.firebasestorage.app\"}","GCLOUD_PROJECT":"dreampos-94155","EVENTARC_CLOUD_EVENT_SOURCE":"projects/dreampos-94155/locations/us-central1/services/api","FUNCTION_TARGET":"api","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","uri":"https://api-3gprbkbsaq-uc.a.run.app","serviceAccountEmail":"9643074965-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"api-00004-lek","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"726db92b6c050a05b343e19f342865412b4c927c"},"environment":"GEN_2","url":"https://us-central1-dreampos-94155.cloudfunctions.net/api","satisfiesPzi":true},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/9643074965/locations/us-central1/builds/62422821-08f0-4872-aab7-8b5afb52a76c","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/62422821-08f0-4872-aab7-8b5afb52a76c?project=9643074965"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"UPDATE_FUNCTION","buildName":"projects/9643074965/locations/us-central1/builds/62422821-08f0-4872-aab7-8b5afb52a76c"},"done":false}
+[debug] [2025-08-21T08:22:26.321Z] [update-default-us-central1-api] Retrying task index 0
+[debug] [2025-08-21T08:22:26.322Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:22:26.322Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:22:26.322Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/dreampos-94155/locations/us-central1/operations/operation-1755764541735-63cdbc9d1c3f0-cee9fa8b-44b288b6 [none]
+[debug] [2025-08-21T08:22:27.152Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/dreampos-94155/locations/us-central1/operations/operation-1755764541735-63cdbc9d1c3f0-cee9fa8b-44b288b6 200
+[debug] [2025-08-21T08:22:27.153Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/dreampos-94155/locations/us-central1/operations/operation-1755764541735-63cdbc9d1c3f0-cee9fa8b-44b288b6 {"name":"projects/dreampos-94155/locations/us-central1/operations/operation-1755764541735-63cdbc9d1c3f0-cee9fa8b-44b288b6","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2025-08-21T08:22:22.932916384Z","target":"projects/dreampos-94155/locations/us-central1/functions/api","verb":"update","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/dreampos-94155/locations/us-central1/functions/api","buildConfig":{"runtime":"nodejs22","entryPoint":"api","source":{"storageSource":{"bucket":"gcf-v2-sources-9643074965-us-central1","object":"api/function-source.zip","generation":"1755764542846646"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/dreampos-94155/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-9643074965-us-central1","object":"api/function-source.zip","generation":"1755589740145194"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/dreampos-94155/serviceAccounts/9643074965-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/dreampos-94155/locations/us-central1/services/api","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"dreampos-94155\",\"storageBucket\":\"dreampos-94155.firebasestorage.app\"}","GCLOUD_PROJECT":"dreampos-94155","EVENTARC_CLOUD_EVENT_SOURCE":"projects/dreampos-94155/locations/us-central1/services/api","FUNCTION_TARGET":"api","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","uri":"https://api-3gprbkbsaq-uc.a.run.app","serviceAccountEmail":"9643074965-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"api-00004-lek","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"726db92b6c050a05b343e19f342865412b4c927c"},"environment":"GEN_2","url":"https://us-central1-dreampos-94155.cloudfunctions.net/api","satisfiesPzi":true},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/9643074965/locations/us-central1/builds/62422821-08f0-4872-aab7-8b5afb52a76c","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/62422821-08f0-4872-aab7-8b5afb52a76c?project=9643074965"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"UPDATE_FUNCTION","buildName":"projects/9643074965/locations/us-central1/builds/62422821-08f0-4872-aab7-8b5afb52a76c"},"done":false}
+[debug] [2025-08-21T08:22:29.158Z] [update-default-us-central1-api] Retrying task index 0
+[debug] [2025-08-21T08:22:29.159Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:22:29.159Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:22:29.159Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/dreampos-94155/locations/us-central1/operations/operation-1755764541735-63cdbc9d1c3f0-cee9fa8b-44b288b6 [none]
+[debug] [2025-08-21T08:22:30.010Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/dreampos-94155/locations/us-central1/operations/operation-1755764541735-63cdbc9d1c3f0-cee9fa8b-44b288b6 200
+[debug] [2025-08-21T08:22:30.011Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/dreampos-94155/locations/us-central1/operations/operation-1755764541735-63cdbc9d1c3f0-cee9fa8b-44b288b6 {"name":"projects/dreampos-94155/locations/us-central1/operations/operation-1755764541735-63cdbc9d1c3f0-cee9fa8b-44b288b6","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2025-08-21T08:22:22.932916384Z","target":"projects/dreampos-94155/locations/us-central1/functions/api","verb":"update","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/dreampos-94155/locations/us-central1/functions/api","buildConfig":{"runtime":"nodejs22","entryPoint":"api","source":{"storageSource":{"bucket":"gcf-v2-sources-9643074965-us-central1","object":"api/function-source.zip","generation":"1755764542846646"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/dreampos-94155/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-9643074965-us-central1","object":"api/function-source.zip","generation":"1755589740145194"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/dreampos-94155/serviceAccounts/9643074965-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/dreampos-94155/locations/us-central1/services/api","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"dreampos-94155\",\"storageBucket\":\"dreampos-94155.firebasestorage.app\"}","GCLOUD_PROJECT":"dreampos-94155","EVENTARC_CLOUD_EVENT_SOURCE":"projects/dreampos-94155/locations/us-central1/services/api","FUNCTION_TARGET":"api","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","uri":"https://api-3gprbkbsaq-uc.a.run.app","serviceAccountEmail":"9643074965-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"api-00004-lek","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"726db92b6c050a05b343e19f342865412b4c927c"},"environment":"GEN_2","url":"https://us-central1-dreampos-94155.cloudfunctions.net/api","satisfiesPzi":true},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/9643074965/locations/us-central1/builds/62422821-08f0-4872-aab7-8b5afb52a76c","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/62422821-08f0-4872-aab7-8b5afb52a76c?project=9643074965"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"UPDATE_FUNCTION","buildName":"projects/9643074965/locations/us-central1/builds/62422821-08f0-4872-aab7-8b5afb52a76c"},"done":false}
+[debug] [2025-08-21T08:22:34.026Z] [update-default-us-central1-api] Retrying task index 0
+[debug] [2025-08-21T08:22:34.026Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:22:34.026Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:22:34.027Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/dreampos-94155/locations/us-central1/operations/operation-1755764541735-63cdbc9d1c3f0-cee9fa8b-44b288b6 [none]
+[debug] [2025-08-21T08:22:34.827Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/dreampos-94155/locations/us-central1/operations/operation-1755764541735-63cdbc9d1c3f0-cee9fa8b-44b288b6 200
+[debug] [2025-08-21T08:22:34.827Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/dreampos-94155/locations/us-central1/operations/operation-1755764541735-63cdbc9d1c3f0-cee9fa8b-44b288b6 {"name":"projects/dreampos-94155/locations/us-central1/operations/operation-1755764541735-63cdbc9d1c3f0-cee9fa8b-44b288b6","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2025-08-21T08:22:22.932916384Z","target":"projects/dreampos-94155/locations/us-central1/functions/api","verb":"update","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/dreampos-94155/locations/us-central1/functions/api","buildConfig":{"runtime":"nodejs22","entryPoint":"api","source":{"storageSource":{"bucket":"gcf-v2-sources-9643074965-us-central1","object":"api/function-source.zip","generation":"1755764542846646"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/dreampos-94155/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-9643074965-us-central1","object":"api/function-source.zip","generation":"1755589740145194"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/dreampos-94155/serviceAccounts/9643074965-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/dreampos-94155/locations/us-central1/services/api","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"dreampos-94155\",\"storageBucket\":\"dreampos-94155.firebasestorage.app\"}","GCLOUD_PROJECT":"dreampos-94155","EVENTARC_CLOUD_EVENT_SOURCE":"projects/dreampos-94155/locations/us-central1/services/api","FUNCTION_TARGET":"api","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","uri":"https://api-3gprbkbsaq-uc.a.run.app","serviceAccountEmail":"9643074965-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"api-00004-lek","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"726db92b6c050a05b343e19f342865412b4c927c"},"environment":"GEN_2","url":"https://us-central1-dreampos-94155.cloudfunctions.net/api","satisfiesPzi":true},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/9643074965/locations/us-central1/builds/62422821-08f0-4872-aab7-8b5afb52a76c","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/62422821-08f0-4872-aab7-8b5afb52a76c?project=9643074965"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"UPDATE_FUNCTION","buildName":"projects/9643074965/locations/us-central1/builds/62422821-08f0-4872-aab7-8b5afb52a76c"},"done":false}
+[debug] [2025-08-21T08:22:42.832Z] [update-default-us-central1-api] Retrying task index 0
+[debug] [2025-08-21T08:22:42.833Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:22:42.833Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:22:42.833Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/dreampos-94155/locations/us-central1/operations/operation-1755764541735-63cdbc9d1c3f0-cee9fa8b-44b288b6 [none]
+[debug] [2025-08-21T08:22:43.838Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/dreampos-94155/locations/us-central1/operations/operation-1755764541735-63cdbc9d1c3f0-cee9fa8b-44b288b6 200
+[debug] [2025-08-21T08:22:43.839Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/dreampos-94155/locations/us-central1/operations/operation-1755764541735-63cdbc9d1c3f0-cee9fa8b-44b288b6 {"name":"projects/dreampos-94155/locations/us-central1/operations/operation-1755764541735-63cdbc9d1c3f0-cee9fa8b-44b288b6","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2025-08-21T08:22:22.932916384Z","target":"projects/dreampos-94155/locations/us-central1/functions/api","verb":"update","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/dreampos-94155/locations/us-central1/functions/api","buildConfig":{"runtime":"nodejs22","entryPoint":"api","source":{"storageSource":{"bucket":"gcf-v2-sources-9643074965-us-central1","object":"api/function-source.zip","generation":"1755764542846646"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/dreampos-94155/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-9643074965-us-central1","object":"api/function-source.zip","generation":"1755589740145194"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/dreampos-94155/serviceAccounts/9643074965-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/dreampos-94155/locations/us-central1/services/api","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"dreampos-94155\",\"storageBucket\":\"dreampos-94155.firebasestorage.app\"}","GCLOUD_PROJECT":"dreampos-94155","EVENTARC_CLOUD_EVENT_SOURCE":"projects/dreampos-94155/locations/us-central1/services/api","FUNCTION_TARGET":"api","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","uri":"https://api-3gprbkbsaq-uc.a.run.app","serviceAccountEmail":"9643074965-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"api-00004-lek","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"726db92b6c050a05b343e19f342865412b4c927c"},"environment":"GEN_2","url":"https://us-central1-dreampos-94155.cloudfunctions.net/api","satisfiesPzi":true},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/9643074965/locations/us-central1/builds/62422821-08f0-4872-aab7-8b5afb52a76c","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/62422821-08f0-4872-aab7-8b5afb52a76c?project=9643074965"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"UPDATE_FUNCTION","buildName":"projects/9643074965/locations/us-central1/builds/62422821-08f0-4872-aab7-8b5afb52a76c"},"done":false}
+[debug] [2025-08-21T08:22:53.852Z] [update-default-us-central1-api] Retrying task index 0
+[debug] [2025-08-21T08:22:53.854Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:22:53.854Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:22:53.855Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/dreampos-94155/locations/us-central1/operations/operation-1755764541735-63cdbc9d1c3f0-cee9fa8b-44b288b6 [none]
+[debug] [2025-08-21T08:22:54.702Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/dreampos-94155/locations/us-central1/operations/operation-1755764541735-63cdbc9d1c3f0-cee9fa8b-44b288b6 200
+[debug] [2025-08-21T08:22:54.703Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/dreampos-94155/locations/us-central1/operations/operation-1755764541735-63cdbc9d1c3f0-cee9fa8b-44b288b6 {"name":"projects/dreampos-94155/locations/us-central1/operations/operation-1755764541735-63cdbc9d1c3f0-cee9fa8b-44b288b6","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2025-08-21T08:22:22.932916384Z","target":"projects/dreampos-94155/locations/us-central1/functions/api","verb":"update","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/dreampos-94155/locations/us-central1/functions/api","buildConfig":{"runtime":"nodejs22","entryPoint":"api","source":{"storageSource":{"bucket":"gcf-v2-sources-9643074965-us-central1","object":"api/function-source.zip","generation":"1755764542846646"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/dreampos-94155/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-9643074965-us-central1","object":"api/function-source.zip","generation":"1755589740145194"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/dreampos-94155/serviceAccounts/9643074965-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/dreampos-94155/locations/us-central1/services/api","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"dreampos-94155\",\"storageBucket\":\"dreampos-94155.firebasestorage.app\"}","GCLOUD_PROJECT":"dreampos-94155","EVENTARC_CLOUD_EVENT_SOURCE":"projects/dreampos-94155/locations/us-central1/services/api","FUNCTION_TARGET":"api","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","uri":"https://api-3gprbkbsaq-uc.a.run.app","serviceAccountEmail":"9643074965-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"api-00004-lek","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"726db92b6c050a05b343e19f342865412b4c927c"},"environment":"GEN_2","url":"https://us-central1-dreampos-94155.cloudfunctions.net/api","satisfiesPzi":true},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/9643074965/locations/us-central1/builds/62422821-08f0-4872-aab7-8b5afb52a76c","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/62422821-08f0-4872-aab7-8b5afb52a76c?project=9643074965"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"UPDATE_FUNCTION","buildName":"projects/9643074965/locations/us-central1/builds/62422821-08f0-4872-aab7-8b5afb52a76c"},"done":false}
+[debug] [2025-08-21T08:23:04.719Z] [update-default-us-central1-api] Retrying task index 0
+[debug] [2025-08-21T08:23:04.719Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:23:04.719Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:23:04.720Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/dreampos-94155/locations/us-central1/operations/operation-1755764541735-63cdbc9d1c3f0-cee9fa8b-44b288b6 [none]
+[debug] [2025-08-21T08:23:05.587Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/dreampos-94155/locations/us-central1/operations/operation-1755764541735-63cdbc9d1c3f0-cee9fa8b-44b288b6 200
+[debug] [2025-08-21T08:23:05.587Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/dreampos-94155/locations/us-central1/operations/operation-1755764541735-63cdbc9d1c3f0-cee9fa8b-44b288b6 {"name":"projects/dreampos-94155/locations/us-central1/operations/operation-1755764541735-63cdbc9d1c3f0-cee9fa8b-44b288b6","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2025-08-21T08:22:22.932916384Z","target":"projects/dreampos-94155/locations/us-central1/functions/api","verb":"update","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/dreampos-94155/locations/us-central1/functions/api","buildConfig":{"runtime":"nodejs22","entryPoint":"api","source":{"storageSource":{"bucket":"gcf-v2-sources-9643074965-us-central1","object":"api/function-source.zip","generation":"1755764542846646"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/dreampos-94155/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-9643074965-us-central1","object":"api/function-source.zip","generation":"1755589740145194"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/dreampos-94155/serviceAccounts/9643074965-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/dreampos-94155/locations/us-central1/services/api","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"dreampos-94155\",\"storageBucket\":\"dreampos-94155.firebasestorage.app\"}","GCLOUD_PROJECT":"dreampos-94155","EVENTARC_CLOUD_EVENT_SOURCE":"projects/dreampos-94155/locations/us-central1/services/api","FUNCTION_TARGET":"api","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","uri":"https://api-3gprbkbsaq-uc.a.run.app","serviceAccountEmail":"9643074965-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"api-00004-lek","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"726db92b6c050a05b343e19f342865412b4c927c"},"environment":"GEN_2","url":"https://us-central1-dreampos-94155.cloudfunctions.net/api","satisfiesPzi":true},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/9643074965/locations/us-central1/builds/62422821-08f0-4872-aab7-8b5afb52a76c","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/62422821-08f0-4872-aab7-8b5afb52a76c?project=9643074965"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"UPDATE_FUNCTION","buildName":"projects/9643074965/locations/us-central1/builds/62422821-08f0-4872-aab7-8b5afb52a76c"},"done":false}
+[debug] [2025-08-21T08:23:15.602Z] [update-default-us-central1-api] Retrying task index 0
+[debug] [2025-08-21T08:23:15.603Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:23:15.603Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:23:15.603Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/dreampos-94155/locations/us-central1/operations/operation-1755764541735-63cdbc9d1c3f0-cee9fa8b-44b288b6 [none]
+[debug] [2025-08-21T08:23:16.558Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/dreampos-94155/locations/us-central1/operations/operation-1755764541735-63cdbc9d1c3f0-cee9fa8b-44b288b6 200
+[debug] [2025-08-21T08:23:16.558Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/dreampos-94155/locations/us-central1/operations/operation-1755764541735-63cdbc9d1c3f0-cee9fa8b-44b288b6 {"name":"projects/dreampos-94155/locations/us-central1/operations/operation-1755764541735-63cdbc9d1c3f0-cee9fa8b-44b288b6","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2025-08-21T08:22:22.932916384Z","endTime":"2025-08-21T08:23:06.508257202Z","target":"projects/dreampos-94155/locations/us-central1/functions/api","verb":"update","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/dreampos-94155/locations/us-central1/functions/api","buildConfig":{"runtime":"nodejs22","entryPoint":"api","source":{"storageSource":{"bucket":"gcf-v2-sources-9643074965-us-central1","object":"api/function-source.zip","generation":"1755764542846646"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/dreampos-94155/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-9643074965-us-central1","object":"api/function-source.zip","generation":"1755589740145194"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/dreampos-94155/serviceAccounts/9643074965-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/dreampos-94155/locations/us-central1/services/api","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"dreampos-94155\",\"storageBucket\":\"dreampos-94155.firebasestorage.app\"}","GCLOUD_PROJECT":"dreampos-94155","EVENTARC_CLOUD_EVENT_SOURCE":"projects/dreampos-94155/locations/us-central1/services/api","FUNCTION_TARGET":"api","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","uri":"https://api-3gprbkbsaq-uc.a.run.app","serviceAccountEmail":"9643074965-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"api-00004-lek","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"726db92b6c050a05b343e19f342865412b4c927c"},"environment":"GEN_2","url":"https://us-central1-dreampos-94155.cloudfunctions.net/api","satisfiesPzi":true},"stages":[{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"UPDATE_FUNCTION"},"done":true,"error":{"code":3,"message":"Build failed with status: FAILURE and message: npm error code EUSAGE\nnpm error\nnpm error The `npm ci` command can only install with an existing package-lock.json or\nnpm error npm-shrinkwrap.json with lockfileVersion >= 1. Run an install with npm@5 or\nnpm error later to generate a package-lock.json file, then try again.\nnpm error\nnpm error Clean install a project\nnpm error\nnpm error Usage:\nnpm error npm ci\nnpm error\nnpm error Options:\nnpm error [--install-strategy <hoisted|nested|shallow|linked>] [--legacy-bundling]\nnpm error [--global-style] [--omit <dev|optional|peer> [--omit <dev|optional|peer> ...]]\nnpm error [--include <prod|dev|optional|peer> [--include <prod|dev|optional|peer> ...]]\nnpm error [--strict-peer-deps] [--foreground-scripts] [--ignore-scripts] [--no-audit]\nnpm error [--no-bin-links] [--no-fund] [--dry-run]\nnpm error [-w|--workspace <workspace-name> [-w|--workspace <workspace-name> ...]]\nnpm error [-ws|--workspaces] [--include-workspace-root] [--install-links]\nnpm error\nnpm error aliases: clean-install, ic, install-clean, isntall-clean\nnpm error\nnpm error Run \"npm help ci\" for more info\nnpm error A complete log of this run can be found in: /www-data-home/.npm/_logs/2025-08-21T08_22_46_994Z-debug-0.log. For more details see the logs at https://console.cloud.google.com/cloud-build/builds;region=us-central1/62422821-08f0-4872-aab7-8b5afb52a76c?project=9643074965."}}
+[debug] [2025-08-21T08:23:16.559Z] Got source token undefined for region us-central1
+[error] Build failed with status: FAILURE and message: npm error code EUSAGE
+npm error
+npm error The `npm ci` command can only install with an existing package-lock.json or
+npm error npm-shrinkwrap.json with lockfileVersion >= 1. Run an install with npm@5 or
+npm error later to generate a package-lock.json file, then try again.
+npm error
+npm error Clean install a project
+npm error
+npm error Usage:
+npm error npm ci
+npm error
+npm error Options:
+npm error [--install-strategy <hoisted|nested|shallow|linked>] [--legacy-bundling]
+npm error [--global-style] [--omit <dev|optional|peer> [--omit <dev|optional|peer> ...]]
+npm error [--include <prod|dev|optional|peer> [--include <prod|dev|optional|peer> ...]]
+npm error [--strict-peer-deps] [--foreground-scripts] [--ignore-scripts] [--no-audit]
+npm error [--no-bin-links] [--no-fund] [--dry-run]
+npm error [-w|--workspace <workspace-name> [-w|--workspace <workspace-name> ...]]
+npm error [-ws|--workspaces] [--include-workspace-root] [--install-links]
+npm error
+npm error aliases: clean-install, ic, install-clean, isntall-clean
+npm error
+npm error Run "npm help ci" for more info
+npm error A complete log of this run can be found in: /www-data-home/.npm/_logs/2025-08-21T08_22_46_994Z-debug-0.log. For more details see the logs at https://console.cloud.google.com/cloud-build/builds;region=us-central1/62422821-08f0-4872-aab7-8b5afb52a76c?project=9643074965.
+[debug] [2025-08-21T08:23:16.576Z] Total Function Deployment time: 55363
+[debug] [2025-08-21T08:23:16.576Z] 1 Functions Deployed
+[debug] [2025-08-21T08:23:16.576Z] 1 Functions Errored
+[debug] [2025-08-21T08:23:16.576Z] 0 Function Deployments Aborted
+[debug] [2025-08-21T08:23:16.576Z] Average Function Deployment time: 55361
+[info] 
+[info] Functions deploy had errors with the following functions:
+	api(us-central1)
+[debug] [2025-08-21T08:23:16.805Z] Not printing URL for HTTPS function. Typically this means it didn't match a filter or we failed deployment
+[debug] [2025-08-21T08:23:16.806Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:23:16.807Z] Checked if tokens are valid: true, expires at: 1755768101401
+[debug] [2025-08-21T08:23:16.807Z] >>> [apiv2][query] GET https://artifactregistry.googleapis.com/v1/projects/dreampos-94155/locations/us-central1/repositories/gcf-artifacts [none]
+[debug] [2025-08-21T08:23:17.844Z] <<< [apiv2][status] GET https://artifactregistry.googleapis.com/v1/projects/dreampos-94155/locations/us-central1/repositories/gcf-artifacts 200
+[debug] [2025-08-21T08:23:17.844Z] <<< [apiv2][body] GET https://artifactregistry.googleapis.com/v1/projects/dreampos-94155/locations/us-central1/repositories/gcf-artifacts {"name":"projects/dreampos-94155/locations/us-central1/repositories/gcf-artifacts","format":"DOCKER","description":"This repository is created and used by Cloud Functions for storing function docker images.","labels":{"goog-managed-by":"cloudfunctions"},"createTime":"2025-08-10T14:28:14.736400Z","updateTime":"2025-08-20T13:42:02.020325Z","mode":"STANDARD_REPOSITORY","cleanupPolicies":{"firebase-functions-cleanup":{"id":"firebase-functions-cleanup","action":"DELETE","condition":{"tagState":"ANY","olderThan":"86400s"}}},"vulnerabilityScanningConfig":{"lastEnableTime":"2025-08-10T14:28:06.182943736Z","enablementState":"SCANNING_DISABLED","enablementStateReason":"API containerscanning.googleapis.com is not enabled."},"satisfiesPzi":true,"registryUri":"us-central1-docker.pkg.dev/dreampos-94155/gcf-artifacts"}
+[debug] [2025-08-21T08:23:17.845Z] Functions deploy failed.
+[debug] [2025-08-21T08:23:17.845Z] {
+  "endpoint": {
+    "id": "api",
+    "project": "dreampos-94155",
+    "region": "us-central1",
+    "entryPoint": "api",
+    "platform": "gcfv2",
+    "runtime": "nodejs22",
+    "httpsTrigger": {},
+    "labels": {
+      "deployment-tool": "cli-firebase"
+    },
+    "serviceAccount": null,
+    "ingressSettings": null,
+    "availableMemoryMb": null,
+    "timeoutSeconds": null,
+    "maxInstances": null,
+    "minInstances": null,
+    "concurrency": 80,
+    "vpc": null,
+    "environmentVariables": {
+      "FIREBASE_CONFIG": "{\"projectId\":\"dreampos-94155\",\"storageBucket\":\"dreampos-94155.firebasestorage.app\"}",
+      "GCLOUD_PROJECT": "dreampos-94155",
+      "EVENTARC_CLOUD_EVENT_SOURCE": "projects/dreampos-94155/locations/us-central1/services/api",
+      "FUNCTION_TARGET": "api",
+      "LOG_EXECUTION_ID": "true"
+    },
+    "codebase": "default",
+    "runServiceId": "api",
+    "cpu": 1,
+    "securityLevel": "SECURE_ALWAYS",
+    "targetedByOnly": false,
+    "hash": "726db92b6c050a05b343e19f342865412b4c927c"
+  },
+  "op": "update",
+  "original": {
+    "name": "FirebaseError",
+    "children": [],
+    "exit": 1,
+    "message": "Build failed with status: FAILURE and message: npm error code EUSAGE\nnpm error\nnpm error The `npm ci` command can only install with an existing package-lock.json or\nnpm error npm-shrinkwrap.json with lockfileVersion >= 1. Run an install with npm@5 or\nnpm error later to generate a package-lock.json file, then try again.\nnpm error\nnpm error Clean install a project\nnpm error\nnpm error Usage:\nnpm error npm ci\nnpm error\nnpm error Options:\nnpm error [--install-strategy <hoisted|nested|shallow|linked>] [--legacy-bundling]\nnpm error [--global-style] [--omit <dev|optional|peer> [--omit <dev|optional|peer> ...]]\nnpm error [--include <prod|dev|optional|peer> [--include <prod|dev|optional|peer> ...]]\nnpm error [--strict-peer-deps] [--foreground-scripts] [--ignore-scripts] [--no-audit]\nnpm error [--no-bin-links] [--no-fund] [--dry-run]\nnpm error [-w|--workspace <workspace-name> [-w|--workspace <workspace-name> ...]]\nnpm error [-ws|--workspaces] [--include-workspace-root] [--install-links]\nnpm error\nnpm error aliases: clean-install, ic, install-clean, isntall-clean\nnpm error\nnpm error Run \"npm help ci\" for more info\nnpm error A complete log of this run can be found in: /www-data-home/.npm/_logs/2025-08-21T08_22_46_994Z-debug-0.log. For more details see the logs at https://console.cloud.google.com/cloud-build/builds;region=us-central1/62422821-08f0-4872-aab7-8b5afb52a76c?project=9643074965.",
+    "original": {
+      "code": 3,
+      "message": "Build failed with status: FAILURE and message: npm error code EUSAGE\nnpm error\nnpm error The `npm ci` command can only install with an existing package-lock.json or\nnpm error npm-shrinkwrap.json with lockfileVersion >= 1. Run an install with npm@5 or\nnpm error later to generate a package-lock.json file, then try again.\nnpm error\nnpm error Clean install a project\nnpm error\nnpm error Usage:\nnpm error npm ci\nnpm error\nnpm error Options:\nnpm error [--install-strategy <hoisted|nested|shallow|linked>] [--legacy-bundling]\nnpm error [--global-style] [--omit <dev|optional|peer> [--omit <dev|optional|peer> ...]]\nnpm error [--include <prod|dev|optional|peer> [--include <prod|dev|optional|peer> ...]]\nnpm error [--strict-peer-deps] [--foreground-scripts] [--ignore-scripts] [--no-audit]\nnpm error [--no-bin-links] [--no-fund] [--dry-run]\nnpm error [-w|--workspace <workspace-name> [-w|--workspace <workspace-name> ...]]\nnpm error [-ws|--workspaces] [--include-workspace-root] [--install-links]\nnpm error\nnpm error aliases: clean-install, ic, install-clean, isntall-clean\nnpm error\nnpm error Run \"npm help ci\" for more info\nnpm error A complete log of this run can be found in: /www-data-home/.npm/_logs/2025-08-21T08_22_46_994Z-debug-0.log. For more details see the logs at https://console.cloud.google.com/cloud-build/builds;region=us-central1/62422821-08f0-4872-aab7-8b5afb52a76c?project=9643074965."
+    },
+    "status": 3,
+    "code": 3
+  }
+}
+[debug] [2025-08-21T08:23:17.920Z] Error: Failed to update function api in region us-central1
+    at C:\Users\szamb\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:399:19
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Fabricator.updateV2Function (C:\Users\szamb\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:388:32)
+    at async Fabricator.updateEndpoint (C:\Users\szamb\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:155:13)
+    at async handle (C:\Users\szamb\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:89:17)
+[error] 
+[error] Error: There was an error deploying functions
+[debug] [2025-08-21T08:27:12.817Z] File C:\Users\szamb\pos-system\backend\functions\package.json changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\szamb\\pos-system\\backend\\functions\\package.json changed, reloading triggers"}}
+[debug] [2025-08-21T08:27:13.825Z] Validating nodejs source
+[debug] [2025-08-21T08:27:17.160Z] > [functions] package.json contents: {
+  "name": "pos-backend",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc",
+    "serve": "firebase emulators:start --only functions,firestore",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log",
+    "create-admin": "cross-env GCLOUD_PROJECT=dreampos-94155 FIRESTORE_EMULATOR_HOST=127.0.0.1:8180 ts-node src/scripts/createAdmin.ts",
+    "read-admin": "cross-env GCLOUD_PROJECT=poszambo FIRESTORE_EMULATOR_HOST=127.0.0.1:8180 ts-node src/scripts/readAdmin.ts"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "firebase-admin": "^12.1.0",
+    "firebase-functions": "^6.4.0",
+    "joi": "^17.13.1",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.6",
+    "cross-env": "^10.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}
+[debug] [2025-08-21T08:27:17.161Z] Building nodejs source
+[debug] [2025-08-21T08:27:17.161Z] Failed to find version of module node: reached end of search path C:\Users\szamb\pos-system\backend\functions\node_modules
+[info] +  functions: Using node@22 from host. 
+[debug] [2025-08-21T08:27:17.163Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-08-21T08:27:17.175Z] Found firebase-functions binary at 'C:\Users\szamb\pos-system\backend\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8954
+
+[debug] [2025-08-21T08:27:19.363Z] Got response from /__/functions.yaml {"endpoints":{"api":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] +  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
