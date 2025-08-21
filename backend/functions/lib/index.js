@@ -38,6 +38,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.api = void 0;
 const functions = __importStar(require("firebase-functions"));
+const firebase_functions_1 = require("firebase-functions");
 const express_1 = __importStar(require("express"));
 const cors_1 = __importDefault(require("cors"));
 const auth_routes_1 = __importDefault(require("./api/routes/auth.routes"));
@@ -45,6 +46,7 @@ const products_routes_1 = __importDefault(require("./api/routes/products.routes"
 const sales_routes_1 = __importDefault(require("./api/routes/sales.routes"));
 const status_routes_1 = __importDefault(require("./api/routes/status.routes"));
 const stores_routes_1 = __importDefault(require("./api/routes/stores.routes"));
+firebase_functions_1.logger.info("Function cold start: loading source code.");
 const main = (0, express_1.default)();
 const apiRouter = (0, express_1.Router)();
 main.use((0, cors_1.default)({ origin: true }));
@@ -58,5 +60,6 @@ apiRouter.use('/stores', stores_routes_1.default);
 apiRouter.get('/test', (req, res) => res.send('API Test OK'));
 // Mount the apiRouter under the /api path
 main.use('/api', apiRouter);
+firebase_functions_1.logger.info("Express app configured, exporting API function.");
 exports.api = functions.https.onRequest(main);
 //# sourceMappingURL=index.js.map
