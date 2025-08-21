@@ -1,4 +1,5 @@
 import * as functions from 'firebase-functions';
+import { logger } from 'firebase-functions';
 import express, { Router } from 'express';
 import cors from 'cors';
 
@@ -7,6 +8,8 @@ import productRoutes from './api/routes/products.routes';
 import saleRoutes from './api/routes/sales.routes';
 import statusRoutes from './api/routes/status.routes';
 import storesRoutes from './api/routes/stores.routes';
+
+logger.info("Function cold start: loading source code.");
 
 const main = express();
 const apiRouter = Router();
@@ -25,5 +28,7 @@ apiRouter.get('/test', (req, res) => res.send('API Test OK'));
 
 // Mount the apiRouter under the /api path
 main.use('/api', apiRouter);
+
+logger.info("Express app configured, exporting API function.");
 
 export const api = functions.https.onRequest(main);
