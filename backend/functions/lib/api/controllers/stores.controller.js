@@ -1,5 +1,6 @@
-import { Request, Response } from 'express';
-// import { db } from '../../config/firebase.config'; // Commented out
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.deleteStore = exports.updateStore = exports.createStore = exports.getStore = exports.getStores = void 0;
 // import {
 //     getAllStores,
 //     getStoreById,
@@ -7,8 +8,7 @@ import { Request, Response } from 'express';
 //     updateStore as updateStoreInDb,
 //     deleteStore as deleteStoreFromDb
 // } from '../../../../dist/stores'; // Commented out
-
-export const getStores = async (req: Request, res: Response) => {
+const getStores = async (req, res) => {
     try {
         // const stores = await getAllStores(db); // Commented out
         const stores = [
@@ -16,24 +16,27 @@ export const getStores = async (req: Request, res: Response) => {
             { id: 'dummy-controller-2', name: 'Dummy Store Controller 2', address: '456 Controller Ave', salesCount: 0, stockQuantity: 0 },
         ];
         return res.status(200).json(stores);
-    } catch (error) {
+    }
+    catch (error) {
         console.error("Error getting stores:", error);
         return res.status(500).json({ message: 'Error getting stores' });
     }
 };
-
-export const getStore = async (req: Request, res: Response) => {
+exports.getStores = getStores;
+const getStore = async (req, res) => {
     return res.status(501).json({ message: 'Not Implemented' });
 };
-
-export const createStore = async (req: Request, res: Response) => {
+exports.getStore = getStore;
+const createStore = async (req, res) => {
     return res.status(501).json({ message: 'Not Implemented' });
 };
-
-export const updateStore = async (req: Request, res: Response) => {
+exports.createStore = createStore;
+const updateStore = async (req, res) => {
     return res.status(501).json({ message: 'Not Implemented' });
 };
-
-export const deleteStore = async (req: Request, res: Response) => {
+exports.updateStore = updateStore;
+const deleteStore = async (req, res) => {
     return res.status(501).json({ message: 'Not Implemented' });
 };
+exports.deleteStore = deleteStore;
+//# sourceMappingURL=stores.controller.js.map

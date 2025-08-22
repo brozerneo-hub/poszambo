@@ -1,4 +1,4 @@
-Aug 21, 2025 9:23:51 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start
+Aug 21, 2025 6:17:30 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start
 INFO: Started WebSocket server on ws://127.0.0.1:9150
 API endpoint: http://127.0.0.1:8181
 If you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:
@@ -12,69 +12,19 @@ If you are running a Firestore in Datastore Mode project, run:
 Note: Support for Datastore Mode is in preview. If you encounter any bugs please file at https://github.com/firebase/firebase-tools/issues.
 Dev App Server is now running.
 
-Aug 21, 2025 9:24:07 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+Aug 21, 2025 6:18:07 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
 INFO: Connected to new websocket client
-Aug 21, 2025 9:24:33 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
-Aug 21, 2025 9:24:37 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
-Aug 21, 2025 9:25:37 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
-Aug 21, 2025 9:26:37 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
-Aug 21, 2025 9:27:23 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
-Aug 21, 2025 9:28:23 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
-Aug 21, 2025 9:28:27 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
-INFO: Websocket client disconnected
-Aug 21, 2025 9:28:43 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
-Aug 21, 2025 9:29:07 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
-INFO: Connected to new websocket client
-Aug 21, 2025 9:29:43 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
-Aug 21, 2025 9:30:44 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
-Aug 21, 2025 9:31:44 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
-Aug 21, 2025 9:32:44 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
-Aug 21, 2025 9:33:44 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
-Aug 21, 2025 9:34:44 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
-Aug 21, 2025 9:35:45 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
-Aug 21, 2025 9:36:45 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
-Aug 21, 2025 9:37:30 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
-Aug 21, 2025 9:37:30 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
-Aug 21, 2025 9:37:30 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
-Aug 21, 2025 9:37:33 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
-Aug 21, 2025 9:37:33 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
-Aug 21, 2025 9:37:38 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
-Aug 21, 2025 9:37:39 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
-Aug 21, 2025 9:37:47 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+Aug 21, 2025 6:19:37 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
 INFO: Detected HTTP/2 connection.
-Aug 21, 2025 9:38:38 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+Aug 21, 2025 6:20:43 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
 INFO: Detected non-HTTP/2 connection.
-Aug 21, 2025 9:38:38 AM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose
-INFO: channel closed
-Aug 21, 2025 9:45:27 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
-INFO: Websocket client disconnected
-Aug 21, 2025 9:53:36 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
-INFO: Connected to new websocket client
-Aug 21, 2025 10:15:27 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected HTTP/2 connection.
-Aug 21, 2025 10:22:02 AM io.netty.channel.DefaultChannelPipeline onUnhandledInboundException
+Aug 21, 2025 6:20:44 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 6:21:45 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 6:22:45 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 6:23:30 PM io.netty.channel.DefaultChannelPipeline onUnhandledInboundException
 WARNING: An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
 java.net.SocketException: Connection reset
 	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
@@ -92,19 +42,237 @@ java.net.SocketException: Connection reset
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
 
-Aug 21, 2025 10:32:51 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+Aug 21, 2025 6:23:45 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 6:24:41 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+Aug 21, 2025 6:24:45 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 6:25:46 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 6:26:13 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 6:26:14 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 6:26:22 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+Aug 21, 2025 6:26:23 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+Aug 21, 2025 6:26:44 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 6:26:44 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 6:26:45 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 6:26:48 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 6:26:48 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 6:27:48 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 6:27:48 PM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose
+INFO: channel closed
+Aug 21, 2025 6:32:45 PM io.netty.channel.DefaultChannelPipeline onUnhandledInboundException
+WARNING: An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:994)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Aug 21, 2025 6:47:06 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+Aug 21, 2025 6:47:56 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 6:47:56 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 6:48:39 PM io.netty.channel.DefaultChannelPipeline onUnhandledInboundException
+WARNING: An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:994)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+Aug 21, 2025 6:48:56 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 6:49:42 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 6:50:42 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 6:51:43 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 6:52:43 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 6:53:43 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 6:54:43 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 6:55:43 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 6:56:43 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 6:57:44 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 6:58:44 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 6:59:44 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:00:30 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:00:30 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:00:30 PM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose
+INFO: channel closed
+Aug 21, 2025 7:00:31 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:01:31 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:01:57 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:01:57 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:01:57 PM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose
+INFO: channel closed
+Aug 21, 2025 7:01:57 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:02:57 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:03:58 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:04:58 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:05:58 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:06:44 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:07:14 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:07:14 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:07:14 PM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose
+INFO: channel closed
+Aug 21, 2025 7:07:14 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:08:00 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:09:00 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:10:00 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:11:00 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:12:01 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:12:42 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:12:43 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:12:43 PM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose
+INFO: channel closed
+Aug 21, 2025 7:12:43 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:13:29 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:14:29 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:15:29 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:16:29 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:17:15 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:18:15 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:19:31 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:20:31 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:21:17 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:22:17 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:23:02 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
 INFO: Websocket client disconnected
-Aug 21, 2025 10:33:07 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+Aug 21, 2025 7:24:27 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
 INFO: Connected to new websocket client
-Aug 21, 2025 10:39:21 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+Aug 21, 2025 7:24:27 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:24:27 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:25:27 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:26:27 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:27:28 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:28:28 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:29:28 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:30:28 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:31:29 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:31:32 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
 INFO: Websocket client disconnected
-Aug 21, 2025 10:40:07 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+Aug 21, 2025 7:32:54 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
 INFO: Connected to new websocket client
-Aug 21, 2025 10:43:21 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+Aug 21, 2025 7:32:55 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:33:55 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:34:55 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:35:41 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:36:41 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:37:41 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:38:41 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:39:27 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:40:27 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:41:27 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:42:15 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:42:15 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:42:15 PM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose
+INFO: channel closed
+Aug 21, 2025 7:42:15 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:43:15 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:44:04 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
 INFO: Websocket client disconnected
-Aug 21, 2025 10:47:36 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
-INFO: Connected to new websocket client
-Aug 21, 2025 10:47:39 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
-INFO: Websocket client disconnected
-Aug 21, 2025 10:48:07 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
-INFO: Connected to new websocket client
+Aug 21, 2025 7:44:08 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Aug 21, 2025 7:44:08 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+Aug 21, 2025 7:44:08 PM com.google.cloud.datastore.emulator.impl.firestore.CloudFirestoreV1 exportData
+INFO: Exporting emulator data to firebase-export-17557982484708bwgau/firestore_export

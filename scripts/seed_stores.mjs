@@ -16,13 +16,13 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-console.log("Connexion à l'émulateur Firestore...");
-try {
-    connectFirestoreEmulator(db, 'localhost', 8181);
-    console.log("✅ Connecté à l'émulateur Firestore.");
-} catch (e) {
-    console.warn("⚠️ L'émulateur semble déjà connecté. On continue...");
-}
+// console.log("Connexion à l'émulateur Firestore...");
+// try {
+//     connectFirestoreEmulator(db, 'localhost', 8181);
+//     console.log("✅ Connecté à l'émulateur Firestore.");
+// } catch (e) {
+//     console.warn("⚠️ L'émulateur semble déjà connecté. On continue...");
+// }
 
 const stores = [
     { name: "CELINE PARIS GRENELLE", address: "16 Rue de Grenelle, 75007 Paris", salesCount: 0, stockQuantity: 0 },

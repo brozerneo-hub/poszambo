@@ -1,0 +1,20 @@
+feat: Implement Store Management and Disclaimer Integration
+
+This commit introduces the following features and fixes:
+
+- **Store Management:**
+  - Implemented CRUD operations for stores in the backend (`backend/src/stores.ts`, `backend/src/index.ts`).
+  - Created `StoresPage.tsx` for frontend store management.
+  - Updated `DashboardPage.tsx` for navigation to store management.
+  - Added `Store` interface to frontend and backend types.
+  - Introduced generic `Modal.tsx` and updated `Button.tsx` for UI consistency.
+
+- **Disclaimer Integration:**
+  - Integrated disclaimer content into `LoginPage.tsx`.
+
+- **Product Display Fix:**
+  - Clarified frontend's direct Firestore access for products.
+  - Modified `scripts/seed_firestore.js` to allow seeding of deployed Firestore and re-seeding of local emulator.
+
+- **Infrastructure:**
+  - Created `firestore.rules` and `firestore.indexes.json`.
