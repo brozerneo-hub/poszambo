@@ -9,7 +9,6 @@ import {
   Timestamp,
   onSnapshot,
   query,
-  where,
   QuerySnapshot,
   DocumentData,
 } from 'firebase/firestore';

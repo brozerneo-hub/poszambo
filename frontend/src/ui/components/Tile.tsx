@@ -20,13 +20,13 @@ export const Tile: React.FC<TileProps> = ({ icon, title, subtitle, badge, onClic
       className="tile-button" // Use the new CSS class
     >
       {badge && badge > 0 && (
-        <div className="tile-badge"> // Use the new CSS class
+        <div className="tile-badge"> {/* Use the new CSS class */}
           {badge}
         </div>
       )}
-      <Icon name={icon} className="tile-icon" /> // Use the new CSS class
-      <h3 className="tile-title">{title}</h3> // Use the new CSS class
-      {subtitle && <p className="tile-subtitle">{subtitle}</p>} // Use the new CSS class
+      <Icon name={icon} className="tile-icon" /> {/* Use the new CSS class */}
+      <h3 className="tile-title">{title}</h3> {/* Use the new CSS class */}
+      {subtitle && <p className="tile-subtitle">{subtitle}</p>} {/* Use the new CSS class */}
     </button>
   );
 };
