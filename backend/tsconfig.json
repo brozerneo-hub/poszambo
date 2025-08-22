@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "./dist",
+    "outDir": "./functions",
     "module": "esnext",
     "target": "es2020",
     "moduleResolution": "node",
