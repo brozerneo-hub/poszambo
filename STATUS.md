@@ -1,3 +1,24 @@
+### 2025-08-22 - Déploiement Backend et Débogage des Magasins
+
+- **Problèmes résolus depuis la dernière mise à jour (2025-08-21) :**
+  - Le déploiement du frontend cible désormais correctement le projet Firebase `dreampos-94155`.
+  - Le déploiement du backend cible désormais correctement le projet Firebase `dreampos-94155`.
+  - Correction des erreurs ESLint dans le code du frontend qui bloquaient le build.
+  - Correction du répertoire de travail (`working-directory`) pour le build du frontend dans le CI/CD.
+  - Correction du chemin de déploiement `firebase deploy` pour le backend dans le CI/CD.
+  - Mise à jour des permissions du compte de service Firebase utilisé par GitHub Actions.
+  - Correction de la configuration `outDir` dans `backend/tsconfig.json` pour compiler vers le répertoire `functions`.
+  - Correction du script `copy-package-json.cjs` pour copier `package.json` vers le répertoire `functions`.
+  - Toutes les exécutions des workflows GitHub Actions (frontend et backend) se terminent maintenant avec succès.
+  - Les magasins "CELINE" sont confirmés comme étant présents dans la base de données Firestore de production.
+
+- **Problème persistant / En cours de résolution :**
+  - L'API backend déployée (`/api/stores`) renvoie toujours les magasins "Dummy", malgré la présence des magasins "CELINE" dans Firestore et le succès des déploiements.
+  - Les instructions `console.log` ajoutées au code du backend ne s'affichent pas dans les logs des fonctions Firebase, ce qui suggère que le code correct n'est pas exécuté ou déployé comme prévu.
+  - L'utilisateur ne peut pas visualiser le code source déployé de la fonction dans la console Firebase, ce qui complique le débogage direct.
+
+---
+
 ### 2025-08-21 - Stabilisation de l'environnement local & refonte de l'UI Magasins
 
 - **Problèmes résolus:**
